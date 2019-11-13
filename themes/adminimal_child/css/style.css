@@ -1,0 +1,12 @@
+.container-details
+{
+  border: solid 1px black;
+  padding: 5px;
+}
+
+.container-details summary
+{
+  background-color: #434343;
+  color: white;
+  margin-bottom: 5px;
+}

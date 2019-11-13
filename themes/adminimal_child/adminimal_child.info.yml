@@ -1,0 +1,15 @@
+name: Adminimal Child
+type: theme
+description: 'Drupal administration child (sub) theme with modern minimalist design.'
+# core: 8.x
+base theme: adminimal_theme
+
+
+version: '8.x'
+core: '8.x'
+project: 'adminimal_child'
+datestamp: 1558584490
+
+libraries:
+  - 'adminimal_child/global-loading'
+

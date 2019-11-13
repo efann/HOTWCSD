@@ -1,0 +1,9 @@
+name: Custom Module
+description: Module for blocks and custom formatting of content
+package: Custom
+type: module
+version: 1.0
+core: 8.x
+dependencies:
+- node
+- block
