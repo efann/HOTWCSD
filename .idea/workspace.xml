@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7c0bda25-d33d-47fe-9862-69391fb73165" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/custom/src/Plugin/Block/BaseBlock.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/custom/src/Plugin/Block/SlideShowBlock.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/themes/adminimal_child/adminimal_child.theme" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/bstrap_child/bstrap_child.libraries.yml" beforeDir="false" afterPath="$PROJECT_DIR$/themes/bstrap_child/bstrap_child.libraries.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/bstrap_child/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/themes/bstrap_child/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/bstrap_child/js/routines.js" beforeDir="false" afterPath="$PROJECT_DIR$/themes/bstrap_child/js/routines.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/bstrap_child/templates/system/html.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/themes/bstrap_child/templates/system/html.html.twig" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -76,6 +68,7 @@
       <updated>1573593289490</updated>
       <workItem from="1573593290635" duration="5495000" />
       <workItem from="1573670480881" duration="29817000" />
+      <workItem from="1573834873937" duration="164000" />
     </task>
     <servers />
   </component>
@@ -87,7 +80,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
