@@ -30,6 +30,29 @@ var Routines =
     },
 
     //----------------------------------------------------------------------------------------------------
+    // Only change the default behaviour of the logo if on the front page where you
+    // should find the slogan.
+    // And the slogan is in a block: #block-block-3
+    setupLogo: function ()
+    {
+      if (jQuery('body.path-frontpage').length == 0)
+      {
+        return;
+      }
+
+      Beo.fnDialogImageTitleBarHeight = 20;
+      Beo.createImageDialog();
+
+      jQuery('#block-title .image a').click(function (toEvent)
+      {
+        toEvent.preventDefault();
+
+        // Beo.onDialogImageClick will look for img inside of link.
+        Beo.onDialogImageClick(jQuery(this));
+      });
+    },
+
+    //----------------------------------------------------------------------------------------------------
     setupGoogleCalendar: function ()
     {
       var lcCalendar = '#Google-Calendar';
@@ -58,6 +81,29 @@ var Routines =
 
     jQuery(tcCalendar).html(lcHTML);
   },
+
+  // -------------------------------------------------------------------------------------------------------------------
+  setupSlideShowImageSlider: function ()
+  {
+    var loSlider = jQuery("#block-hwslideshowblock .flexslider");
+    if (loSlider.length == 0)
+    {
+      return;
+    }
+
+    loSlider.flexslider(
+      {
+        directionNav: (jQuery(window).width() >= 768),
+        controlNav: (jQuery(window).width() >= 768),
+        prevText: "",
+        nextText: "",
+        animation: "fade",
+        slideshow: false
+      });
+
+    loSlider.fadeIn('slow');
+  },
+
   //----------------------------------------------------------------------------------------------------
   loadIPAddressAJAX: function ()
   {

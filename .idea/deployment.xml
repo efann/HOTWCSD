@@ -47,6 +47,7 @@
             <excludedPath path="/var/www/test.hotwcsd.org/public_html/robots.txt" />
             <excludedPath path="/var/www/test.hotwcsd.org/public_html/update.php" />
             <excludedPath path="/var/www/test.hotwcsd.org/public_html/web.config" />
+            <excludedPath path="/var/www/test.hotwcsd.org/public_html/themes/bstrap_child/js/flexslider" />
           </excludedPaths>
         </serverdata>
       </paths>

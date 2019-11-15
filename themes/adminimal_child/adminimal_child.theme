@@ -1,0 +1,22 @@
+<?php
+
+/**
+ * @file
+ * Bootstrap sub-theme.
+ *
+ * Place your custom PHP code in this file.
+ */
+
+use Drupal\field_collection\Entity\FieldCollectionItem;
+
+// Due to an issue with Drupal 7 migration, the title field seems to lose its required entry status.
+// From https://www.drupal.org/forum/support/upgrading-drupal/2018-08-28/drupal-7-drupal-8-node-title-isnt-mandatory
+function adminimal_child_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id)
+{
+  if (isset($form['title']))
+  {
+    $form['title']['widget'][0]['#required'] = TRUE;
+    $form['title']['widget'][0]['value']['#required'] = TRUE;
+  }
+
+}

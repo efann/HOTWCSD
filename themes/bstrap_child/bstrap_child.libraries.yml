@@ -1,3 +1,15 @@
+flexslider:
+  remote: https://woocommerce.com/flexslider/
+  license:
+    name: GNU General Public License v2.0
+    url: https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
+    gpl-compatible: true
+  js:
+    js/flexslider/jquery.flexslider-min.js: { minified: true }
+  css:
+    component:
+      js/flexslider/flexslider.css: {}
+
 jquery.ui:
   remote: https://jqueryui.com/
   license:
@@ -38,4 +50,5 @@ global-loading:
     - core/jquery
     - bstrap_child/jquery.ui
     - bstrap_child/beo.routines
+    - bstrap_child/flexslider
     - bstrap_child/theme.files

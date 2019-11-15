@@ -51,7 +51,7 @@ a:hover
 .main-container .row
 {
   /* Matches the header height */
-  padding-top: 185px;
+  padding-top: 115px;
   background-color: white;
   margin: 0 auto;
 }
@@ -80,6 +80,14 @@ header a img:hover,
   -moz-transition: opacity 0.25s ease;
   -webkit-transition: opacity 0.25s ease;
   transition: opacity 0.25s ease;
+}
+
+h2
+{
+  font-size: 1.25em;
+  line-height: 1.3em;
+  margin-top: 0.667em;
+  margin-bottom: 0.667em;
 }
 
 /*----------------------------------------------------------------------------------------*/
@@ -118,59 +126,64 @@ header a img:hover,
   display: block;
 }
 
+.container
+{
+  padding-right: 0;
+  padding-left: 0;
+}
+
+@media screen and (min-width: 768px)
+{
+  body
+  {
+    margin-top: 0;
+  }
+}
+
 /*----------------------------------------------------------------------------------------*/
 /* Header */
 
-header.navbar-fixed-top
+.container > .navbar-header
 {
-  background-image: url('/sites/default/files/images/header-footer/header.jpg');
-  background-repeat: no-repeat;
-  background-position: center;
-  /* http://webdesign.about.com/od/styleproperties/p/blspbgsize.htm */
-  background-size: 100% 100%;
-}
-
-/* Override setting in beo.routines. */
-header .container img
-{
-  display: block;
-}
-
-.container
-{
-  padding-left: 0;
-  padding-right: 0;
-}
-
-.navbar-inverse
-{
-  background-color: #5C9CCC;
-  margin: 0 auto;
+  width: 100%;
 }
 
 /*I got these settings from grid.less for .container*/
-@media (min-width: 768px)
+
+@media screen and (min-width: 768px)
 {
-  .navbar-inverse
+  .navbar.container
   {
     max-width: 750px;
   }
 }
 
-@media (min-width: 992px)
+@media screen and (min-width: 992px)
 {
-  .navbar-inverse
+  .navbar.container
   {
     max-width: 970px;
   }
 }
 
-@media (min-width: 1200px)
+@media screen and (min-width: 1200px)
 {
-  .navbar-inverse
+  .navbar.container
   {
     max-width: 1170px;
   }
+}
+
+.navbar
+{
+  padding-left: 0;
+  padding-right: 0;
+  background-color: #820604;
+  background-size: 100% 100%;
+  width: 100%;
+  margin: 0 auto;
+  border: none;
+  padding: 0;
 }
 
 /*----------------------------------------------------------------------------------------*/
@@ -178,70 +191,37 @@ header .container img
   Menus
 */
 
-.region-navigation-collapsible
+.navbar-header
 {
-  overflow: hidden;
-  margin-top: 0;
+  width: 100%;
 }
 
-@media (min-width: 768px)
+.navbar-inverse .navbar-nav
 {
-  .region-navigation-collapsible
-  {
-    margin-top: 200px;
-  }
+  width: 100%;
+  background-color: #444444;
+  margin: 0;
 }
 
 .navbar-inverse .navbar-nav > li > a
 {
-  color: #0063A0;
+  color: white;
   font-weight: bold;
+  font-size: 1.0em;
 }
 
-.navbar-inverse .navbar-nav > li > a:active,
-.navbar-inverse .navbar-nav > li > a:hover
+.navbar-inverse .navbar-nav > li > a:hover,
+.navbar-inverse .navbar-nav > li > a:focus
 {
-  color: black;
-}
-
-@media (min-width: 768px)
-{
-  .navbar-inverse .navbar-nav > li > a:active,
-  .navbar-inverse .navbar-nav > li > a:hover
-  {
-    color: whitesmoke;
-  }
-}
-
-.navbar-inverse
-{
-  background-color: whitesmoke;
-  border: none;
-}
-
-.navbar-inverse .navbar-nav > .active > a,
-.navbar-inverse .navbar-nav > .active > a:hover,
-.navbar-inverse .navbar-nav > .active > a:focus
-{
-  color: black;
-  background-color: transparent;
-}
-
-@media (min-width: 768px)
-{
-  .navbar-inverse .navbar-nav > .active > a,
-  .navbar-inverse .navbar-nav > .active > a:hover,
-  .navbar-inverse .navbar-nav > .active > a:focus
-  {
-    color: whitesmoke;
-  }
+  /* Background color too dark */
+  color: yellow;
 }
 
 @media (min-width: 768px)
 {
   .navbar .navbar-nav
   {
-    float: right;
+    float: left;
   }
 
   .navbar-nav > li > a
@@ -252,10 +232,13 @@ header .container img
 
 }
 
-.container > .navbar-header
+/* Override setting beo.style.css */
+@media (max-width: 767px)
 {
-  /* Otherwise, label was off the screen on mobile. */
-  margin: 0;
+  div.navbar-collapse
+  {
+    padding: 0;
+  }
 }
 
 /*
@@ -265,7 +248,9 @@ header .container img
 {
   overflow: hidden;
   display: table;
+  border: none;
 }
+
 
 /*----------------------------------------------------------------------------------------*/
 /* Forms */
@@ -278,35 +263,123 @@ header .container img
 /*----------------------------------------------------------------------------------------*/
 /* Blocks */
 
-#block-sitecredit
+#block-title
 {
-  padding-top: 20px;
+  position: relative;
+}
+
+#block-title,
+#block-title .image img
+{
+  height: 150px;
+}
+
+#block-title .image
+{
+  float: left;
+}
+
+#block-title .image img
+{
+  width: auto;
+  display: block;
+}
+
+#block-title .field
+{
+  overflow: hidden;
+}
+
+#block-title .header
+{
+  padding-top: 60px;
+  text-align: center;
+}
+
+#block-title .header .title,
+#block-title .header .motto
+{
+  color: #CCCCCC;
+  text-shadow: 5px 2px 5px rgba(0, 0, 0, 1);
+}
+
+#block-title .header .title
+{
+  font-size: 1.14em;
+  font-style: normal;
+}
+
+#block-title .header .motto
+{
+  font-size: 0.79em;
+  font-style: italic;
+}
+
+@media (min-width: 768px)
+{
+  #block-title .header
+  {
+    padding-top: 28px;
+  }
+
+  #block-title .header .title
+  {
+    font-size: 2.0em;
+  }
+
+  #block-title .header .motto
+  {
+    font-size: 1.42em;
+  }
+
 }
 
 /*----------------------------------------------------------------------------------------*/
 /* Views */
 
-.view-display-id-page_display_content_by_taxonomy
+#block-hwslideshowblock .flexslider
+{
+  display: none;
+}
+
+#block-hwslideshowblock .flexslider li a.dialogbox-image
+{
+  width: 100%;
+}
+
+#block-hwslideshowblock .flexslider li img
+{
+  max-height: 225px;
+  height: 225px;
+  width: auto;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px)
+{
+  #block-hwslideshowblock .flexslider li img
+  {
+    height: 350px;
+    max-height: 350px;
+  }
+}
+
+/* The 40px height cuts off the bottom of the arrows. */
+.flex-direction-nav a
+{
+  height: 44px;
+}
+
+.view-display-id-page_announcements_past .views-row
 {
   margin-left: -15px;
   margin-right: -15px;
-}
-
-.view-display-id-page_display_content_by_taxonomy .views-row
-{
   padding: 20px;
 }
 
-.view-display-id-page_display_content_by_taxonomy .views-row:nth-child(even)
+.view-display-id-page_announcements_past .views-row:nth-child(even)
 {
   background-color: lightgrey;
-}
-
-.view-display-id-page_display_content_by_taxonomy div.views-field-title
-{
-  text-align: center;
-  font-weight: bold;
-  font-size: 1.4em;
 }
 
 /*----------------------------------------------------------------------------------------*/
@@ -314,19 +387,19 @@ header .container img
 
 .footer
 {
-  /* Stretch the image. */
-  background-size: 100% 100%;
-  color: #FBFBF8;
-  padding: 10px;
-  font-size: 0.9em;
+  background-color: #820604;
   border: none;
+  padding: 20px 0;
   margin-top: 0;
+  text-align: center;
+  color: white;
 }
 
 /* Override setting in beo.routines. */
 .footer img
 {
   display: block;
+  margin: 0 auto;
 }
 
 .footer a
