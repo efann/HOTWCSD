@@ -90,6 +90,18 @@ h2
   margin-bottom: 0.667em;
 }
 
+img.pdf
+{
+  width: 32px;
+  height: auto;
+}
+
+/* Used by Drupal 7, and it's in much of the content. */
+.rtecenter
+{
+  text-align: center;
+}
+
 /*----------------------------------------------------------------------------------------*/
 /*
   Ajax
@@ -383,9 +395,37 @@ h2
   padding: 20px;
 }
 
+.view-display-id-page_announcements_past .views-row .views-field-title
+{
+  text-align: center;
+  font-weight: bold;
+  font-size: larger;
+}
+
 .view-display-id-page_announcements_past .views-row:nth-child(even)
 {
   background-color: lightgrey;
+}
+
+.view-display-id-page_display_taxonomy_list .views-field-nid,
+.view-display-id-page_display_taxonomy_list .views-field-title
+{
+  display: none;
+}
+
+/* Will be reset to display: block; in the JavaScript routines. */
+div.view-display-id-page_display_taxonomy_list
+{
+  display: none;
+}
+
+#TaxonomyContentAndListforTabs.ui-widget-content,
+#TaxonomyContentAndListforTabs .ui-widget-content
+{
+  background: none;
+  color: black;
+  border: none;
+  min-height: 600px;
 }
 
 /*----------------------------------------------------------------------------------------*/

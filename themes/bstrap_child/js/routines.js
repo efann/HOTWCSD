@@ -83,6 +83,56 @@ var Routines =
   },
 
   // -------------------------------------------------------------------------------------------------------------------
+  setupTaxonomyTabs: function (tcViewContentBlock)
+  {
+    if (jQuery(tcViewContentBlock).length == 0)
+    {
+      return;
+    }
+
+    var lcWrapperID = "TaxonomyContentAndListforTabs";
+    var lcListID = "TaxonomyListforTabs";
+
+    // First let's generate the HTML list for jQuery tabs from the view.
+    // By the way, you can't use a view to generate the list: too much extra HTML fluff.
+    var lcList = "<ul id='" + lcListID + "'>\n";
+
+    // http://stackoverflow.com/questions/8233604/use-jquery-to-get-descendants-of-an-element-that-are-not-children-of-a-container
+    // This way, the sub-content rows will be excluded from the tabs.
+    jQuery(tcViewContentBlock + " div.views-row").not(".views-row .views-row").each(function ()
+    {
+      var lcNode = "node_" + jQuery(this).find("div.views-field-nid span").html();
+      var lcTitle = jQuery(this).find("div.views-field-title span").html();
+
+      var lcHref = "<a href='#" + lcNode + "'>" + lcTitle + "</a>";
+      lcList += "<li>" + lcHref + "</li>\n";
+
+    });
+
+    lcList += "</ul>\n";
+
+    // For jQuery Tabs to work, you must wrap the entire section with an enclosing div.
+    // This enclosing div will be used as such: jQuery("#" + lcListID).tabs().
+    // Then, insert the ul list above the view block.
+    jQuery(tcViewContentBlock).wrap("<div id='" + lcWrapperID + "'></div>");
+    jQuery(lcList).insertBefore(tcViewContentBlock);
+
+    var loTabs = jQuery("#" + lcWrapperID);
+    loTabs.tabs({
+      show: {effect: "slide", direction: "up"},
+      hide: {effect: "fadeOut", duration: 400}
+    });
+
+    Beo.adjustTabsAlignment(loTabs);
+    jQuery(window).resize(function ()
+    {
+      Beo.adjustTabsAlignment(loTabs);
+    });
+
+    jQuery(tcViewContentBlock + ", #" + lcWrapperID).fadeIn({duration: 250});
+  },
+
+  // -------------------------------------------------------------------------------------------------------------------
   setupSlideShowImageSlider: function ()
   {
     var loSlider = jQuery("#block-hwslideshowblock .flexslider");
@@ -104,6 +154,35 @@ var Routines =
     loSlider.fadeIn('slow');
   },
 
+  // -------------------------------------------------------------------------------------------------------------------
+  // On many of the PDF icons, I set the width and height which tends to be removed in Views, etc.
+  // So this routine should fix the problem by tagging with a class defined in style.css.
+  // Must be called before Beo.setupImageDialogBox.
+  fixPDFDisplay: function ()
+  {
+    jQuery(".row img").each(function ()
+    {
+      var loImage = jQuery(this);
+      var lcSrc = loImage.attr('src');
+      // Linking to the PDF icon.
+      if (lcSrc.includes('PDF-NonCommercialUsage.png'))
+      {
+        loImage.removeAttr('width');
+        loImage.removeAttr('height');
+        loImage.removeAttr('style');
+
+        loImage.addClass('pdf');
+
+        var loParent = loImage.parent();
+        if (loParent.is('a'))
+        {
+          loParent.attr("target", "_blank");
+        }
+      }
+
+    });
+
+  },
   //----------------------------------------------------------------------------------------------------
   loadIPAddressAJAX: function ()
   {
