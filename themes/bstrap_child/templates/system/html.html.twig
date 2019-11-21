@@ -58,7 +58,7 @@ theme.has_glyphicons ? 'has-glyphicons',
   <head-placeholder token="{{ placeholder_token|raw }}">
   <title>{{ head_title|safe_join(' | ') }}</title>
 
-  <link href="//fonts.googleapis.com/css?family=Fjalla+One&display=swap" rel="stylesheet">
+  <link href='//fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
 
   <css-placeholder token="{{ placeholder_token|raw }}">
   <js-placeholder token="{{ placeholder_token|raw }}">
@@ -73,10 +73,14 @@ theme.has_glyphicons ? 'has-glyphicons',
       Routines.setupLogo();
       Routines.fixPDFDisplay();
 
+      Routines.setupVideos();
+
       Routines.setupTaxonomyTabs(".view-display-id-page_display_taxonomy_list");
       Routines.setupWatermarks();
       Routines.setupGoogleCalendar();
       Routines.setupSlideShowImageSlider();
+
+      Routines.setupFacebook();
 
       Beo.setupImageDialogBox(20, 'explode');
     });
@@ -89,17 +93,12 @@ theme.has_glyphicons ? 'has-glyphicons',
 
 </head>
 <body{{ attributes.addClass(body_classes) }}>
+
   <div id="ajax-loading">
     <img src='/sites/default/files/images/ajax-loader.gif' alt='' />
   </div>
 
-    {#
-      The fb-root div is needed for the Facebook routines. This section is in addition to the Facebook
-      display block in the sidebar.
-    #}
-<div id="fb-root"></div>
-
-<a href="#main-content" class="visually-hidden focusable skip-link">
+  <a href="#main-content" class="visually-hidden focusable skip-link">
   {{ 'Skip to main content'|t }}
 </a>
 {{ page_top }}

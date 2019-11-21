@@ -183,28 +183,60 @@ var Routines =
     });
 
   },
+
   //----------------------------------------------------------------------------------------------------
-  loadIPAddressAJAX: function ()
+  setupVideos: function ()
   {
-    Routines.showAJAX(true);
-
-    // To determine the URL. From http://css-tricks.com/snippets/javascript/get-url-and-url-parts-in-javascript/
-    jQuery.ajax({
-      url: window.location.protocol + "//" + window.location.host + "/ajax/ip_address/0"
-    }).done(function (tcData)
+    var loView = jQuery(".view-display-id-page_youtube_videos");
+    if (loView.length == 0)
     {
-      var loIPAddress = jQuery("#ip_address");
+      return;
+    }
 
-      if (loIPAddress.length != 0)
-      {
-        // html vs text function. html does not convert raw text.
-        loIPAddress.html(tcData);
-      }
-
-      Routines.showAJAX(false);
+    var lcProtocol = ('https:' == document.location.protocol) ? 'https' : 'http';
+    loView.find(".views-field-field-youtube-video-id").each(function ()
+    {
+      var lcVideoID = jQuery(this).find(".field-content").html();
+      var lcIFrame = '<div><iframe class="youtube-embedded" src="' + lcProtocol + '://www.youtube.com/embed/' + lcVideoID + '"></iframe></div>';
+      jQuery(this).after(lcIFrame);
     });
 
   },
+
+  //----------------------------------------------------------------------------------------------------
+  setupFacebook: function ()
+  {
+    var loFront = jQuery('.path-frontpage');
+    if (loFront.length === 0)
+    {
+      return;
+    }
+
+    // No need to call initially as the Facebook Module sizes correctly.
+    jQuery(window).resize(function ()
+    {
+      Routines.resizeFacebook();
+    });
+  },
+  //----------------------------------------------------------------------------------------------------
+  // From http://stackoverflow.com/questions/30083986/facebook-page-plugin-rerender-change-width-dynamically-responsive-rwd
+  resizeFacebook: function ()
+  {
+    var loSide = jQuery('.path-frontpage aside.col-sm-3');
+    if (loSide.length === 0)
+    {
+      return;
+    }
+
+    var lnWidth = loSide.width() - 2.0;
+    if (lnWidth < 180)
+    {
+      lnWidth = 180;
+    }
+
+    loSide.find('iframe').css('width', lnWidth);
+  },
+
   //----------------------------------------------------------------------------------------------------
   showAJAX: function (tlShow)
   {

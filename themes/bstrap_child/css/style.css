@@ -1,7 +1,8 @@
 body, caption, th, td, input, textarea, select, option, legend, fieldset,
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6
 {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'PT Sans', sans-serif;
+  font-size: 1.5em;
 }
 
 body
@@ -48,12 +49,18 @@ a:hover
   min-height: 900px;
 }
 
+body.navbar-is-fixed-top
+{
+  margin-top: 0;
+}
+
 .main-container .row
 {
   /* Matches the header height */
-  padding-top: 115px;
+  padding-top: 186px;
   background-color: white;
   margin: 0 auto;
+  min-height: 786px;
 }
 
 .main-container section.col-sm-12
@@ -90,16 +97,76 @@ h2
   margin-bottom: 0.667em;
 }
 
+/*----------------------------------------------------------------------------------------*/
+/*
+  Legacy fixes needed due to import.
+*/
+
+/* Added to every PDF icon by Routines.fixPDFDisplay(). */
+
 img.pdf
 {
   width: 32px;
   height: auto;
+  margin-right: 10px;
+}
+
+a img.pdf
+{
+  opacity: 1.0;
+  -moz-transition: opacity 0.25s ease;
+  -webkit-transition: opacity 0.25s ease;
+
+  transition: opacity 0.25s ease;
+}
+
+a img.pdf:hover
+{
+  opacity: 0.75;
+  -moz-transition: opacity 0.25s ease;
+  -webkit-transition: opacity 0.25s ease;
+
+  transition: opacity 0.25s ease;
 }
 
 /* Used by Drupal 7, and it's in much of the content. */
 .rtecenter
 {
   text-align: center;
+}
+
+p
+{
+  margin: 0 0 20px;
+}
+
+h1
+{
+  font-size: 1.8em;
+  line-height: 1.3em;
+  margin-top: 0;
+  margin-bottom: 0.5em;
+}
+
+h3
+{
+  font-size: 1.1em;
+  line-height: 1.3em;
+  margin-top: 0.769em;
+  margin-bottom: 0.769em;
+}
+
+.select-wrapper select
+{
+  line-height: 1.2;
+  width: 200px;
+  cursor: pointer;
+}
+
+.select-wrapper select option
+{
+  font-size: 1.0em;
+  cursor: pointer;
 }
 
 /*----------------------------------------------------------------------------------------*/
@@ -218,7 +285,6 @@ img.pdf
 .navbar-inverse .navbar-nav > li > a
 {
   color: white;
-  font-weight: bold;
   font-size: 1.0em;
 }
 
@@ -269,6 +335,16 @@ img.pdf
   border: none;
 }
 
+.dropdown-menu
+{
+  border: 1px solid #333333;
+  background: #444444 url(jquery-ui-1.12.1/images/ui-bg_highlight-soft_44_444444_1x100.png) repeat-x;
+}
+
+.dropdown-menu > li > a
+{
+  color: white;
+}
 
 /*----------------------------------------------------------------------------------------*/
 /* Forms */
@@ -352,6 +428,13 @@ img.pdf
 
 }
 
+.path-frontpage aside.col-sm-3 .region-sidebar-second,
+.path-frontpage aside.col-sm-3
+{
+  margin: 0;
+  padding: 0;
+}
+
 /*----------------------------------------------------------------------------------------*/
 /* Views */
 
@@ -388,11 +471,18 @@ img.pdf
   height: 44px;
 }
 
-.view-display-id-page_announcements_past .views-row
+.view-display-id-page_announcements_past .views-row,
+.view-display-id-page_display_taxonomy_list_documents .views-row
 {
   margin-left: -15px;
   margin-right: -15px;
   padding: 20px;
+}
+
+.view-display-id-page_announcements_past .views-row:nth-child(even),
+.view-display-id-page_display_taxonomy_list_documents .views-row:nth-child(even)
+{
+  background-color: lightgrey;
 }
 
 .view-display-id-page_announcements_past .views-row .views-field-title
@@ -400,11 +490,7 @@ img.pdf
   text-align: center;
   font-weight: bold;
   font-size: larger;
-}
-
-.view-display-id-page_announcements_past .views-row:nth-child(even)
-{
-  background-color: lightgrey;
+  padding-bottom: 15px;
 }
 
 .view-display-id-page_display_taxonomy_list .views-field-nid,
@@ -419,13 +505,28 @@ div.view-display-id-page_display_taxonomy_list
   display: none;
 }
 
-#TaxonomyContentAndListforTabs.ui-widget-content,
-#TaxonomyContentAndListforTabs .ui-widget-content
+.view-display-id-page_youtube_videos .views-field-field-youtube-video-id
 {
-  background: none;
-  color: black;
-  border: none;
-  min-height: 600px;
+  display: none;
+}
+
+.view-display-id-page_youtube_videos iframe.youtube-embedded
+{
+  width: 100%;
+  height: 350px;
+}
+
+.view-display-id-page_youtube_videos .views-field-title
+{
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.view-display-id-page_display_taxonomy_list_documents .views-field-field-document-file
+{
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 20px;
 }
 
 /*----------------------------------------------------------------------------------------*/
@@ -457,4 +558,22 @@ div.view-display-id-page_display_taxonomy_list
 .footer a:hover
 {
   color: #222;
+}
+
+/*----------------------------------------------------------------------------------------*/
+/* jQuery UI tweaks */
+
+#TaxonomyContentAndListforTabs.ui-widget-content,
+#TaxonomyContentAndListforTabs .ui-widget-content
+{
+  background: none;
+  color: black;
+  border: none;
+  min-height: 600px;
+}
+
+.ui-tabs .ui-tabs-nav .ui-tabs-anchor
+{
+  float: left;
+  padding: 0.25em 0.5em;
 }
