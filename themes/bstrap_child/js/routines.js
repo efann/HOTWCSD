@@ -238,6 +238,76 @@ var Routines =
   },
 
   //----------------------------------------------------------------------------------------------------
+  setupAnnouncements: function ()
+  {
+    var loAnnoucementBlock = jQuery(".view-display-id-block_announcements_current");
+
+    if (loAnnoucementBlock.length == 0)
+    {
+      return;
+    }
+
+    var loRows = loAnnoucementBlock.find(".views-row .views-field-title a");
+    if (loRows.length == 0)
+    {
+      return;
+    }
+
+    var lcDialog = "#ShowAnnoucementForFrontPage";
+    if (jQuery(lcDialog).length == 0)
+    {
+      jQuery('body').append('<div id="' + lcDialog.substring(1) + '"></div>');
+    }
+
+    var loDialog = jQuery(lcDialog);
+
+    loRows.click(function (toEvent)
+    {
+      toEvent.preventDefault();
+
+      var loThis = jQuery(this);
+
+      var loParentRow = loThis.closest(".views-row");
+
+      // All links from the announcement pop-up should redirect to a new tab.
+      var loBody = loParentRow.find(".views-field-body");
+      loBody.find('a').attr('target', '_blank');
+
+      loDialog.html(loBody.html());
+
+      var lcTitle = loThis.html();
+
+      loDialog.dialog(
+        {
+          width: '90%',
+          height: 'auto',
+          autoOpen: true,
+          show: {
+            effect: 'fade',
+            duration: 300
+          },
+          hide: {
+            effect: 'fade',
+            duration: 300
+          },
+          create: function (toEvent, toUI)
+          {
+            var loParent = jQuery(this).parent();
+            // The maxWidth property doesn't really work.
+            // From http://stackoverflow.com/questions/16471890/responsive-jquery-ui-dialog-and-a-fix-for-maxwidth-bug
+            // And id="ShowTellQuote" gets enclosed in a ui-dialog wrapper. So. . . .
+            loParent.css("maxWidth", "800px");
+
+            // Problems with HTML entities in title: they are encoded. So < becomes &lt; and > becomes &gt;
+            // http://stackoverflow.com/questions/14488774/using-html-in-a-dialogs-title-in-jquery-ui-1-10
+            loParent.find("span.ui-dialog-title").append("<span class='title'>" + lcTitle + "</span>");
+          }
+        });
+    });
+
+  },
+
+  //----------------------------------------------------------------------------------------------------
   showAJAX: function (tlShow)
   {
     var lcAJAX = "#ajax-loading";

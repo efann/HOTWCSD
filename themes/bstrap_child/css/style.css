@@ -28,7 +28,7 @@ a, a:link, a:visited
   font-style: normal;
   font-weight: bold;
   text-decoration: none;
-  color: #0063A0;
+  color: #820604;
 
   /*
     From https://stackoverflow.com/questions/6008324/fade-effect-on-link-hover
@@ -529,6 +529,28 @@ div.view-display-id-page_display_taxonomy_list
   padding-bottom: 20px;
 }
 
+.view-display-id-block_announcements_current .view-content
+{
+  padding: 15px;
+}
+
+.view-display-id-block_announcements_current .views-row
+{
+  padding: 25px 0;
+  box-shadow: inset 0 0 2.5em darkgrey, 0 0 2.5em #820604;
+  text-align: center;
+}
+
+.view-display-id-block_announcements_current .views-row .views-field-body
+{
+  display: none;
+}
+
+.view-display-id-block_announcements_current .views-row a
+{
+  font-size: 1.4em;
+}
+
 /*----------------------------------------------------------------------------------------*/
 /* Footer */
 
@@ -576,4 +598,10 @@ div.view-display-id-page_display_taxonomy_list
 {
   float: left;
   padding: 0.25em 0.5em;
+}
+
+#ShowAnnoucementForFrontPage.ui-dialog-content
+{
+  background: white;
+  color: black;
 }
