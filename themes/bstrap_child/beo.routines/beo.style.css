@@ -1,6 +1,6 @@
 /*----------------------------------------------------------------------------------------*/
 /*
-  Updated on August 29, 2019
+  Updated on November 21, 2019
 */
 
 /*----------------------------------------------------------------------------------------*/
@@ -319,7 +319,7 @@ a.dialogbox-image img:hover
 
 .ui-tabs-vertical
 {
-  width: 55em;
+  width: 100%;
 }
 
 .ui-tabs-vertical .ui-tabs-nav .ui-tabs-anchor

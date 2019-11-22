@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="7c0bda25-d33d-47fe-9862-69391fb73165" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/bstrap_child/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/themes/bstrap_child/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/bstrap_child/js/routines.js" beforeDir="false" afterPath="$PROJECT_DIR$/themes/bstrap_child/js/routines.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/bstrap_child/templates/system/html.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/themes/bstrap_child/templates/system/html.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/bstrap_child/beo.routines/beo.style.css" beforeDir="false" afterPath="$PROJECT_DIR$/themes/bstrap_child/beo.routines/beo.style.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -77,6 +75,8 @@
       <workItem from="1574358590381" duration="5740000" />
       <workItem from="1574366496885" duration="1052000" />
       <workItem from="1574367560125" duration="861000" />
+      <workItem from="1574379567155" duration="505000" />
+      <workItem from="1574394050295" duration="195000" />
     </task>
     <servers />
   </component>
