@@ -1,6 +1,7 @@
 var Routines =
   {
     CONTACT_BLOCK: "#contact-message-feedback-form",
+    foFacebookTimer: null,
 
     //----------------------------------------------------------------------------------------------------
     initializeRoutines: function ()
@@ -215,7 +216,16 @@ var Routines =
     // No need to call initially as the Facebook Module sizes correctly.
     jQuery(window).resize(function ()
     {
-      Routines.resizeFacebook();
+      if (Routines.foFacebookTimer != null)
+      {
+        clearTimeout(Routines.foFacebookTimer);
+      }
+
+      Routines.foFacebookTimer = setTimeout(function ()
+      {
+        Routines.resizeFacebook();
+      }, 1000);
+
     });
   },
   //----------------------------------------------------------------------------------------------------
@@ -228,13 +238,38 @@ var Routines =
       return;
     }
 
+    var loFB = jQuery('#block-fblikebox .fb-page');
+    if (loFB.length === 0)
+    {
+      return;
+    }
+
     var lnWidth = loSide.width() - 2.0;
     if (lnWidth < 180)
     {
       lnWidth = 180;
     }
 
-    loSide.find('iframe').css('width', lnWidth);
+    var lnHeight = (jQuery(window).width() >= 768) ? 1200 : 700;
+
+    loFB.attr("data-width", Math.floor(lnWidth));
+    loFB.attr("data-height", Math.floor(lnHeight));
+
+    loFB.css('width', lnWidth + 'px');
+
+    try
+    {
+      // Sometimes a ReferenceError: FB is not defined
+      // is thrown.
+      if (typeof FB !== 'undefined')
+      {
+        FB.XFBML.parse();
+      }
+    }
+    catch (loErr)
+    {
+    }
+
   },
 
   //----------------------------------------------------------------------------------------------------
