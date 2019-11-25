@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7c0bda25-d33d-47fe-9862-69391fb73165" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/bstrap_child/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/themes/bstrap_child/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/bstrap_child/js/routines.js" beforeDir="false" afterPath="$PROJECT_DIR$/themes/bstrap_child/js/routines.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -80,6 +80,7 @@
       <workItem from="1574394050295" duration="195000" />
       <workItem from="1574438893268" duration="44000" />
       <workItem from="1574438961223" duration="3068000" />
+      <workItem from="1574696212378" duration="4924000" />
     </task>
     <servers />
   </component>

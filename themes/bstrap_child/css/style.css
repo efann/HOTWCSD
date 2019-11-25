@@ -562,7 +562,18 @@ div.view-display-id-page_display_taxonomy_list
   margin-top: 0;
   text-align: center;
   color: white;
+
+  font-size: 0.7em;
 }
+
+@media (min-width: 768px)
+{
+  .footer
+  {
+    font-size: 1.0em;
+  }
+}
+
 
 /* Override setting in beo.routines. */
 .footer img
@@ -600,8 +611,25 @@ div.view-display-id-page_display_taxonomy_list
   padding: 0.25em 0.5em;
 }
 
+#ShowAnnoucementForFrontPage
+{
+  padding: 15px;
+}
+
 #ShowAnnoucementForFrontPage.ui-dialog-content
 {
   background: white;
   color: black;
+}
+
+.ui-widget-content .ui-tabs-nav li a
+{
+  font-weight: normal;
+}
+
+.ui-tabs-vertical .ui-tabs-nav
+{
+  float: none;
+  text-align: center;
+  margin: 0 auto;
 }

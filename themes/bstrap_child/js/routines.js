@@ -69,302 +69,302 @@ var Routines =
         Routines.resizeGoogleCalendar(lcCalendar);
       });
     },
-//----------------------------------------------------------------------------------------------------
-// From http://stackoverflow.com/questions/30083986/facebook-page-plugin-rerender-change-width-dynamically-responsive-rwd
-  resizeGoogleCalendar: function (tcCalendar)
-  {
-    var lcSection = "div.row section";
-    var lnWidth = jQuery(lcSection).width();
-    lnWidth -= parseInt(jQuery(lcSection).css('padding-left'));
-    lnWidth -= parseInt(jQuery(lcSection).css('padding-right'));
-
-    var lcHTML = '<iframe src="https://www.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=ucr8dfm35erc49t2nj23tq1j74%40group.calendar.google.com&amp;color=%2323164E&amp;ctz=America%2FChicago" style=" border-width:0 " width="' + lnWidth + '" height="600" frameborder="0" scrolling="no"></iframe>';
-
-    jQuery(tcCalendar).html(lcHTML);
-  },
-
-  // -------------------------------------------------------------------------------------------------------------------
-  setupTaxonomyTabs: function (tcViewContentBlock)
-  {
-    if (jQuery(tcViewContentBlock).length == 0)
+    //----------------------------------------------------------------------------------------------------
+    // From http://stackoverflow.com/questions/30083986/facebook-page-plugin-rerender-change-width-dynamically-responsive-rwd
+    resizeGoogleCalendar: function (tcCalendar)
     {
-      return;
-    }
+      var lcSection = "div.row section";
+      var lnWidth = jQuery(lcSection).width();
+      lnWidth -= parseInt(jQuery(lcSection).css('padding-left'));
+      lnWidth -= parseInt(jQuery(lcSection).css('padding-right'));
 
-    var lcWrapperID = "TaxonomyContentAndListforTabs";
-    var lcListID = "TaxonomyListforTabs";
+      var lcHTML = '<iframe src="https://www.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=ucr8dfm35erc49t2nj23tq1j74%40group.calendar.google.com&amp;color=%2323164E&amp;ctz=America%2FChicago" style=" border-width:0 " width="' + lnWidth + '" height="600" frameborder="0" scrolling="no"></iframe>';
 
-    // First let's generate the HTML list for jQuery tabs from the view.
-    // By the way, you can't use a view to generate the list: too much extra HTML fluff.
-    var lcList = "<ul id='" + lcListID + "'>\n";
+      jQuery(tcCalendar).html(lcHTML);
+    },
 
-    // http://stackoverflow.com/questions/8233604/use-jquery-to-get-descendants-of-an-element-that-are-not-children-of-a-container
-    // This way, the sub-content rows will be excluded from the tabs.
-    jQuery(tcViewContentBlock + " div.views-row").not(".views-row .views-row").each(function ()
+    // -------------------------------------------------------------------------------------------------------------------
+    setupTaxonomyTabs: function (tcViewContentBlock)
     {
-      var lcNode = "node_" + jQuery(this).find("div.views-field-nid span").html();
-      var lcTitle = jQuery(this).find("div.views-field-title span").html();
-
-      var lcHref = "<a href='#" + lcNode + "'>" + lcTitle + "</a>";
-      lcList += "<li>" + lcHref + "</li>\n";
-
-    });
-
-    lcList += "</ul>\n";
-
-    // For jQuery Tabs to work, you must wrap the entire section with an enclosing div.
-    // This enclosing div will be used as such: jQuery("#" + lcListID).tabs().
-    // Then, insert the ul list above the view block.
-    jQuery(tcViewContentBlock).wrap("<div id='" + lcWrapperID + "'></div>");
-    jQuery(lcList).insertBefore(tcViewContentBlock);
-
-    var loTabs = jQuery("#" + lcWrapperID);
-    loTabs.tabs({
-      show: {effect: "slide", direction: "up"},
-      hide: {effect: "fadeOut", duration: 400}
-    });
-
-    Beo.adjustTabsAlignment(loTabs);
-    jQuery(window).resize(function ()
-    {
-      Beo.adjustTabsAlignment(loTabs);
-    });
-
-    jQuery(tcViewContentBlock + ", #" + lcWrapperID).fadeIn({duration: 250});
-  },
-
-  // -------------------------------------------------------------------------------------------------------------------
-  setupSlideShowImageSlider: function ()
-  {
-    var loSlider = jQuery("#block-hwslideshowblock .flexslider");
-    if (loSlider.length == 0)
-    {
-      return;
-    }
-
-    loSlider.flexslider(
+      if (jQuery(tcViewContentBlock).length == 0)
       {
-        directionNav: (jQuery(window).width() >= 768),
-        controlNav: (jQuery(window).width() >= 768),
-        prevText: "",
-        nextText: "",
-        animation: "fade",
-        slideshow: false
+        return;
+      }
+
+      var lcWrapperID = "TaxonomyContentAndListforTabs";
+      var lcListID = "TaxonomyListforTabs";
+
+      // First let's generate the HTML list for jQuery tabs from the view.
+      // By the way, you can't use a view to generate the list: too much extra HTML fluff.
+      var lcList = "<ul id='" + lcListID + "'>\n";
+
+      // http://stackoverflow.com/questions/8233604/use-jquery-to-get-descendants-of-an-element-that-are-not-children-of-a-container
+      // This way, the sub-content rows will be excluded from the tabs.
+      jQuery(tcViewContentBlock + " div.views-row").not(".views-row .views-row").each(function ()
+      {
+        var lcNode = "node_" + jQuery(this).find("div.views-field-nid span").html();
+        var lcTitle = jQuery(this).find("div.views-field-title span").html();
+
+        var lcHref = "<a href='#" + lcNode + "'>" + lcTitle + "</a>";
+        lcList += "<li>" + lcHref + "</li>\n";
+
       });
 
-    loSlider.fadeIn('slow');
-  },
+      lcList += "</ul>\n";
 
-  // -------------------------------------------------------------------------------------------------------------------
-  // On many of the PDF icons, I set the width and height which tends to be removed in Views, etc.
-  // So this routine should fix the problem by tagging with a class defined in style.css.
-  // Must be called before Beo.setupImageDialogBox.
-  fixPDFDisplay: function ()
-  {
-    jQuery(".row img").each(function ()
-    {
-      var loImage = jQuery(this);
-      var lcSrc = loImage.attr('src');
-      // Linking to the PDF icon.
-      if (lcSrc.includes('PDF-NonCommercialUsage.png'))
+      // For jQuery Tabs to work, you must wrap the entire section with an enclosing div.
+      // This enclosing div will be used as such: jQuery("#" + lcListID).tabs().
+      // Then, insert the ul list above the view block.
+      jQuery(tcViewContentBlock).wrap("<div id='" + lcWrapperID + "'></div>");
+      jQuery(lcList).insertBefore(tcViewContentBlock);
+
+      var loTabs = jQuery("#" + lcWrapperID);
+      loTabs.tabs({
+        show: {effect: "slide", direction: "up"},
+        hide: {effect: "fadeOut", duration: 400}
+      });
+
+      Beo.adjustTabsAlignment(loTabs);
+      jQuery(window).resize(function ()
       {
-        loImage.removeAttr('width');
-        loImage.removeAttr('height');
-        loImage.removeAttr('style');
+        Beo.adjustTabsAlignment(loTabs);
+      });
 
-        loImage.addClass('pdf');
+      jQuery(tcViewContentBlock + ", #" + lcWrapperID).fadeIn({duration: 250});
+    },
 
-        var loParent = loImage.parent();
-        if (loParent.is('a'))
+    // -------------------------------------------------------------------------------------------------------------------
+    setupSlideShowImageSlider: function ()
+    {
+      var loSlider = jQuery("#block-hwslideshowblock .flexslider");
+      if (loSlider.length == 0)
+      {
+        return;
+      }
+
+      loSlider.flexslider(
         {
-          loParent.attr("target", "_blank");
+          directionNav: (jQuery(window).width() >= 768),
+          controlNav: true,
+          prevText: "",
+          nextText: "",
+          animation: "fade",
+          slideshow: false
+        });
+
+      loSlider.fadeIn('slow');
+    },
+
+    // -------------------------------------------------------------------------------------------------------------------
+    // On many of the PDF icons, I set the width and height which tends to be removed in Views, etc.
+    // So this routine should fix the problem by tagging with a class defined in style.css.
+    // Must be called before Beo.setupImageDialogBox.
+    fixPDFDisplay: function ()
+    {
+      jQuery(".row img").each(function ()
+      {
+        var loImage = jQuery(this);
+        var lcSrc = loImage.attr('src');
+        // Linking to the PDF icon.
+        if (lcSrc.includes('PDF-NonCommercialUsage.png'))
+        {
+          loImage.removeAttr('width');
+          loImage.removeAttr('height');
+          loImage.removeAttr('style');
+
+          loImage.addClass('pdf');
+
+          var loParent = loImage.parent();
+          if (loParent.is('a'))
+          {
+            loParent.attr("target", "_blank");
+          }
+        }
+
+      });
+
+    },
+
+    //----------------------------------------------------------------------------------------------------
+    setupVideos: function ()
+    {
+      var loView = jQuery(".view-display-id-page_youtube_videos");
+      if (loView.length == 0)
+      {
+        return;
+      }
+
+      var lcProtocol = ('https:' == document.location.protocol) ? 'https' : 'http';
+      loView.find(".views-field-field-youtube-video-id").each(function ()
+      {
+        var lcVideoID = jQuery(this).find(".field-content").html();
+        var lcIFrame = '<div><iframe class="youtube-embedded" src="' + lcProtocol + '://www.youtube.com/embed/' + lcVideoID + '"></iframe></div>';
+        jQuery(this).after(lcIFrame);
+      });
+
+    },
+
+    //----------------------------------------------------------------------------------------------------
+    setupFacebook: function ()
+    {
+      var loFront = jQuery('.path-frontpage');
+      if (loFront.length === 0)
+      {
+        return;
+      }
+
+      // No need to call initially as the Facebook Module sizes correctly.
+      jQuery(window).resize(function ()
+      {
+        if (Routines.foFacebookTimer != null)
+        {
+          clearTimeout(Routines.foFacebookTimer);
+        }
+
+        Routines.foFacebookTimer = setTimeout(function ()
+        {
+          Routines.resizeFacebook();
+        }, 1000);
+
+      });
+    },
+    //----------------------------------------------------------------------------------------------------
+    // From http://stackoverflow.com/questions/30083986/facebook-page-plugin-rerender-change-width-dynamically-responsive-rwd
+    resizeFacebook: function ()
+    {
+      var loSide = jQuery('.path-frontpage aside.col-sm-3');
+      if (loSide.length === 0)
+      {
+        return;
+      }
+
+      var loFB = jQuery('#block-fblikebox .fb-page');
+      if (loFB.length === 0)
+      {
+        return;
+      }
+
+      var lnWidth = loSide.width() - 2.0;
+      if (lnWidth < 180)
+      {
+        lnWidth = 180;
+      }
+
+      var lnHeight = (jQuery(window).width() >= 768) ? 1200 : 700;
+
+      loFB.attr("data-width", Math.floor(lnWidth));
+      loFB.attr("data-height", Math.floor(lnHeight));
+
+      loFB.css('width', lnWidth + 'px');
+
+      try
+      {
+        // Sometimes a ReferenceError: FB is not defined
+        // is thrown.
+        if (typeof FB !== 'undefined')
+        {
+          FB.XFBML.parse();
         }
       }
-
-    });
-
-  },
-
-  //----------------------------------------------------------------------------------------------------
-  setupVideos: function ()
-  {
-    var loView = jQuery(".view-display-id-page_youtube_videos");
-    if (loView.length == 0)
-    {
-      return;
-    }
-
-    var lcProtocol = ('https:' == document.location.protocol) ? 'https' : 'http';
-    loView.find(".views-field-field-youtube-video-id").each(function ()
-    {
-      var lcVideoID = jQuery(this).find(".field-content").html();
-      var lcIFrame = '<div><iframe class="youtube-embedded" src="' + lcProtocol + '://www.youtube.com/embed/' + lcVideoID + '"></iframe></div>';
-      jQuery(this).after(lcIFrame);
-    });
-
-  },
-
-  //----------------------------------------------------------------------------------------------------
-  setupFacebook: function ()
-  {
-    var loFront = jQuery('.path-frontpage');
-    if (loFront.length === 0)
-    {
-      return;
-    }
-
-    // No need to call initially as the Facebook Module sizes correctly.
-    jQuery(window).resize(function ()
-    {
-      if (Routines.foFacebookTimer != null)
+      catch (loErr)
       {
-        clearTimeout(Routines.foFacebookTimer);
       }
 
-      Routines.foFacebookTimer = setTimeout(function ()
+    },
+
+    //----------------------------------------------------------------------------------------------------
+    setupAnnouncements: function ()
+    {
+      var loAnnoucementBlock = jQuery(".view-display-id-block_announcements_current");
+
+      if (loAnnoucementBlock.length == 0)
       {
-        Routines.resizeFacebook();
-      }, 1000);
-
-    });
-  },
-  //----------------------------------------------------------------------------------------------------
-  // From http://stackoverflow.com/questions/30083986/facebook-page-plugin-rerender-change-width-dynamically-responsive-rwd
-  resizeFacebook: function ()
-  {
-    var loSide = jQuery('.path-frontpage aside.col-sm-3');
-    if (loSide.length === 0)
-    {
-      return;
-    }
-
-    var loFB = jQuery('#block-fblikebox .fb-page');
-    if (loFB.length === 0)
-    {
-      return;
-    }
-
-    var lnWidth = loSide.width() - 2.0;
-    if (lnWidth < 180)
-    {
-      lnWidth = 180;
-    }
-
-    var lnHeight = (jQuery(window).width() >= 768) ? 1200 : 700;
-
-    loFB.attr("data-width", Math.floor(lnWidth));
-    loFB.attr("data-height", Math.floor(lnHeight));
-
-    loFB.css('width', lnWidth + 'px');
-
-    try
-    {
-      // Sometimes a ReferenceError: FB is not defined
-      // is thrown.
-      if (typeof FB !== 'undefined')
-      {
-        FB.XFBML.parse();
+        return;
       }
-    }
-    catch (loErr)
-    {
-    }
 
-  },
+      var loRows = loAnnoucementBlock.find(".views-row .views-field-title a");
+      if (loRows.length == 0)
+      {
+        return;
+      }
 
-  //----------------------------------------------------------------------------------------------------
-  setupAnnouncements: function ()
-  {
-    var loAnnoucementBlock = jQuery(".view-display-id-block_announcements_current");
+      var lcDialog = "#ShowAnnoucementForFrontPage";
+      if (jQuery(lcDialog).length == 0)
+      {
+        jQuery('body').append('<div id="' + lcDialog.substring(1) + '"></div>');
+      }
 
-    if (loAnnoucementBlock.length == 0)
-    {
-      return;
-    }
+      var loDialog = jQuery(lcDialog);
 
-    var loRows = loAnnoucementBlock.find(".views-row .views-field-title a");
-    if (loRows.length == 0)
-    {
-      return;
-    }
+      loRows.click(function (toEvent)
+      {
+        toEvent.preventDefault();
 
-    var lcDialog = "#ShowAnnoucementForFrontPage";
-    if (jQuery(lcDialog).length == 0)
-    {
-      jQuery('body').append('<div id="' + lcDialog.substring(1) + '"></div>');
-    }
+        var loThis = jQuery(this);
 
-    var loDialog = jQuery(lcDialog);
+        var loParentRow = loThis.closest(".views-row");
 
-    loRows.click(function (toEvent)
-    {
-      toEvent.preventDefault();
+        // All links from the announcement pop-up should redirect to a new tab.
+        var loBody = loParentRow.find(".views-field-body");
+        loBody.find('a').attr('target', '_blank');
 
-      var loThis = jQuery(this);
+        loDialog.html(loBody.html());
 
-      var loParentRow = loThis.closest(".views-row");
+        var lcTitle = loThis.html();
 
-      // All links from the announcement pop-up should redirect to a new tab.
-      var loBody = loParentRow.find(".views-field-body");
-      loBody.find('a').attr('target', '_blank');
-
-      loDialog.html(loBody.html());
-
-      var lcTitle = loThis.html();
-
-      loDialog.dialog(
-        {
-          width: '90%',
-          height: 'auto',
-          autoOpen: true,
-          show: {
-            effect: 'fade',
-            duration: 300
-          },
-          hide: {
-            effect: 'fade',
-            duration: 300
-          },
-          create: function (toEvent, toUI)
+        loDialog.dialog(
           {
-            var loParent = jQuery(this).parent();
-            // The maxWidth property doesn't really work.
-            // From http://stackoverflow.com/questions/16471890/responsive-jquery-ui-dialog-and-a-fix-for-maxwidth-bug
-            // And id="ShowTellQuote" gets enclosed in a ui-dialog wrapper. So. . . .
-            loParent.css("maxWidth", "800px");
+            width: '90%',
+            height: 'auto',
+            autoOpen: true,
+            show: {
+              effect: 'fade',
+              duration: 300
+            },
+            hide: {
+              effect: 'fade',
+              duration: 300
+            },
+            create: function (toEvent, toUI)
+            {
+              var loParent = jQuery(this).parent();
+              // The maxWidth property doesn't really work.
+              // From http://stackoverflow.com/questions/16471890/responsive-jquery-ui-dialog-and-a-fix-for-maxwidth-bug
+              // And id="ShowTellQuote" gets enclosed in a ui-dialog wrapper. So. . . .
+              loParent.css("maxWidth", "800px");
 
-            // Problems with HTML entities in title: they are encoded. So < becomes &lt; and > becomes &gt;
-            // http://stackoverflow.com/questions/14488774/using-html-in-a-dialogs-title-in-jquery-ui-1-10
-            loParent.find("span.ui-dialog-title").append("<span class='title'>" + lcTitle + "</span>");
-          }
-        });
-    });
+              // Problems with HTML entities in title: they are encoded. So < becomes &lt; and > becomes &gt;
+              // http://stackoverflow.com/questions/14488774/using-html-in-a-dialogs-title-in-jquery-ui-1-10
+              loParent.find("span.ui-dialog-title").append("<span class='title'>" + lcTitle + "</span>");
+            }
+          });
+      });
 
-  },
+    },
 
-  //----------------------------------------------------------------------------------------------------
-  showAJAX: function (tlShow)
-  {
-    var lcAJAX = "#ajax-loading";
-    var loAJAX = jQuery(lcAJAX);
-    if (loAJAX.length == 0)
+    //----------------------------------------------------------------------------------------------------
+    showAJAX: function (tlShow)
     {
-      alert("The HTML element " + lcAJAX + " does not exist!");
-      return;
-    }
+      var lcAJAX = "#ajax-loading";
+      var loAJAX = jQuery(lcAJAX);
+      if (loAJAX.length == 0)
+      {
+        alert("The HTML element " + lcAJAX + " does not exist!");
+        return;
+      }
 
-    if (tlShow)
-    {
-      loAJAX.show();
-    }
-    else
-    {
-      loAJAX.hide();
-    }
+      if (tlShow)
+      {
+        loAJAX.show();
+      }
+      else
+      {
+        loAJAX.hide();
+      }
 
-  }
-  //----------------------------------------------------------------------------------------------------
-};
+    }
+    //----------------------------------------------------------------------------------------------------
+  };
 //----------------------------------------------------------------------------------------------------
 //----------------------------------------------------------------------------------------------------
 //----------------------------------------------------------------------------------------------------
