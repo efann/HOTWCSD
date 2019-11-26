@@ -1,6 +1,7 @@
 var Routines =
   {
     CONTACT_BLOCK: "#contact-message-feedback-form",
+    FACEBOOK_BLOCK: '#block-fblikebox .fb-page',
     foFacebookTimer: null,
 
     //----------------------------------------------------------------------------------------------------
@@ -213,6 +214,13 @@ var Routines =
         return;
       }
 
+      var loFB = jQuery(Routines.FACEBOOK_BLOCK);
+      if (loFB.length !== 0)
+      {
+        // Reset the tab order inside the sidebar.
+        loFB.attr('data-tabs', 'events,timeline,messages');
+      }
+
       // No need to call initially as the Facebook Module sizes correctly.
       jQuery(window).resize(function ()
       {
@@ -238,7 +246,7 @@ var Routines =
         return;
       }
 
-      var loFB = jQuery('#block-fblikebox .fb-page');
+      var loFB = jQuery(Routines.FACEBOOK_BLOCK);
       if (loFB.length === 0)
       {
         return;
