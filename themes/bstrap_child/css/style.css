@@ -199,10 +199,12 @@ h3
 
 #ajax-loading img
 {
+  /* Override beo.style.css img setting */
+  display: block;
+
   width: 32px;
   height: auto;
   margin: 5px;
-  display: block;
 }
 
 .container
