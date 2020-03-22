@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="7c0bda25-d33d-47fe-9862-69391fb73165" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/adminimal_child/adminimal_child.info.yml" beforeDir="false" afterPath="$PROJECT_DIR$/themes/adminimal_child/adminimal_child.info.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,6 +91,8 @@
       <workItem from="1580319431975" duration="13000" />
       <workItem from="1584647170633" duration="1893000" />
       <workItem from="1584717419895" duration="1311000" />
+      <workItem from="1584719353377" duration="102000" />
+      <workItem from="1584902046944" duration="10000" />
     </task>
     <servers />
   </component>
@@ -121,10 +122,10 @@
     </state>
     <state x="135" y="139" width="1720" height="880" key="DirDiffDialog/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1584718731588" />
     <state x="2055" y="139" width="1720" height="880" key="DirDiffDialog/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1584647365246" />
-    <state x="830" y="446" key="publish.login" timestamp="1584717506367">
+    <state x="830" y="446" key="publish.login" timestamp="1584719382856">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="830" y="446" key="publish.login/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1584717506367" />
+    <state x="830" y="446" key="publish.login/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1584719382856" />
     <state x="2750" y="446" key="publish.login/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1584647247696" />
   </component>
 </project>
