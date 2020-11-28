@@ -459,6 +459,16 @@ h3
   padding: 0;
 }
 
+.covid-notice
+{
+  text-align: center;
+  border-style: ridge;
+  border-width: 5px;
+  border-color: gray;
+  padding: 10px;
+  font-weight: bold;
+}
+
 /*----------------------------------------------------------------------------------------*/
 /* Views */
 
