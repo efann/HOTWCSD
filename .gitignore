@@ -1,8 +1,7 @@
 # Ignore configuration files that may contain sensitive information.
 sites/*/*settings*.php
 
-.idea/
-.idea/*.xml
+.idea/ssh*.xml
 
 # =========================
 # Operating System Files

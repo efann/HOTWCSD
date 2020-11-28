@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="7c0bda25-d33d-47fe-9862-69391fb73165" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1TX4pYCmzLEuNDu7kC2wAjcGy9T" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/modules/custom/src" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.JavaScript" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\PhpStorm\HOTWCSD\modules\custom\src" />
+      <recent name="D:\PhpStorm\HOTWCSD\themes\adminimal_child" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7c0bda25-d33d-47fe-9862-69391fb73165" name="Default Changelist" comment="" />
+      <created>1573593289490</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1573593289490</updated>
+      <workItem from="1573593290635" duration="5495000" />
+      <workItem from="1573670480881" duration="29817000" />
+      <workItem from="1573834873937" duration="164000" />
+      <workItem from="1574178161464" duration="11660000" />
+      <workItem from="1574264254277" duration="13431000" />
+      <workItem from="1574358590381" duration="5740000" />
+      <workItem from="1574366496885" duration="1052000" />
+      <workItem from="1574367560125" duration="861000" />
+      <workItem from="1574379567155" duration="505000" />
+      <workItem from="1574394050295" duration="195000" />
+      <workItem from="1574438893268" duration="44000" />
+      <workItem from="1574438961223" duration="3068000" />
+      <workItem from="1574696212378" duration="4924000" />
+      <workItem from="1574810295817" duration="297000" />
+      <workItem from="1574810649917" duration="60000" />
+      <workItem from="1574875420951" duration="1703000" />
+      <workItem from="1578691868055" duration="11000" />
+      <workItem from="1579844100897" duration="99000" />
+      <workItem from="1580319431975" duration="13000" />
+      <workItem from="1584647170633" duration="1893000" />
+      <workItem from="1584717419895" duration="1311000" />
+      <workItem from="1584719353377" duration="102000" />
+      <workItem from="1584902046944" duration="10000" />
+      <workItem from="1606585411674" duration="67000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="2507" y="240" key="#Deployment" timestamp="1584647223092">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2507" y="240" key="#Deployment/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1584647223092" />
+    <state x="135" y="139" width="1720" height="880" key="DirDiffDialog" timestamp="1584718731588">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="135" y="139" width="1720" height="880" key="DirDiffDialog/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1584718731588" />
+    <state x="2055" y="139" width="1720" height="880" key="DirDiffDialog/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1584647365246" />
+    <state x="830" y="446" key="publish.login" timestamp="1584719382856">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="830" y="446" key="publish.login/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1584719382856" />
+    <state x="2750" y="446" key="publish.login/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1584647247696" />
+  </component>
+</project>
