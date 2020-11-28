@@ -2,6 +2,7 @@
 sites/*/*settings*.php
 
 .idea/
+.idea/*.xml
 
 # =========================
 # Operating System Files
