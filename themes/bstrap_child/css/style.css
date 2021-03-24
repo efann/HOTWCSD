@@ -289,6 +289,35 @@ h3
   margin: 0;
 }
 
+/*
+  I got these settings from grid.less for .container
+  Makes the header match the footer size.
+*/
+
+@media (min-width: 768px)
+{
+  .navbar-inverse
+  {
+    max-width: 750px;
+  }
+}
+
+@media (min-width: 992px)
+{
+  .navbar-inverse
+  {
+    max-width: 970px;
+  }
+}
+
+@media (min-width: 1200px)
+{
+  .navbar-inverse
+  {
+    max-width: 1170px;
+  }
+}
+
 .navbar-inverse .navbar-nav > li > a
 {
   color: white;

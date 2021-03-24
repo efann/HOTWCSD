@@ -32,26 +32,21 @@ var Routines =
     },
 
     //----------------------------------------------------------------------------------------------------
-    // Only change the default behaviour of the logo if on the front page where you
-    // should find the slogan.
-    // And the slogan is in a block: #block-block-3
+    // Only change the default behaviour of the logo if NOT on the front page.
+    // If not on the front page, then change the href to the home page.
+    // Otherwise, leave alone in order to work with Lightbox.
     setupLogo: function ()
     {
       if (jQuery('body.path-frontpage').length == 0)
       {
-        return;
+        let loLink = jQuery('#block-title div.image a');
+        loLink.removeAttr('data-lightbox');
+        loLink.removeAttr('data-alt');
+        loLink.removeAttr('data-title');
+
+        loLink.attr('href', '/');
       }
 
-      Beo.fnDialogImageTitleBarHeight = 20;
-      Beo.createImageDialog();
-
-      jQuery('#block-title .image a').click(function (toEvent)
-      {
-        toEvent.preventDefault();
-
-        // Beo.onDialogImageClick will look for img inside of link.
-        Beo.onDialogImageClick(jQuery(this));
-      });
     },
 
     //----------------------------------------------------------------------------------------------------
@@ -346,6 +341,55 @@ var Routines =
               loParent.find("span.ui-dialog-title").append("<span class='title'>" + lcTitle + "</span>");
             }
           });
+      });
+
+    },
+
+    //----------------------------------------------------------------------------------------------------
+    // Now using Lightbox to display images.
+    setupLightbox: function ()
+    {
+      let llCheckClass = true;
+      let lcMainContent = "div.main-container";
+      let lcImageClass = "responsive-image-large"
+
+      // Unfortunately, I can't get the title in the template of field.html.twig.
+      // to override the image output.
+      let lcPageTitle = jQuery(document).attr('title').split('|')[0].trim();
+
+      jQuery(lcMainContent + " img").each(function ()
+      {
+        let loImage = jQuery(this);
+        if (!loImage.attr('alt'))
+        {
+          loImage.attr('alt', lcPageTitle);
+        }
+
+        if (!loImage.attr('title'))
+        {
+          loImage.attr('title', lcPageTitle);
+        }
+
+        loImage.removeAttr('width');
+        loImage.removeAttr('height');
+        loImage.removeAttr('style');
+
+        if (llCheckClass)
+        {
+          let lcClasses = loImage.attr('class');
+
+          if ((typeof lcClasses === 'undefined') || (lcClasses.indexOf('responsive-image') < 0))
+          {
+            loImage.addClass(lcImageClass);
+          }
+        }
+
+        if (!loImage.parent().is('a'))
+        {
+          let lcSource = loImage.attr('src');
+          // From https://stackoverflow.com/questions/610406/javascript-equivalent-to-printf-string-format
+          loImage.wrap(`<a href="${lcSource}" data-lightbox="${lcPageTitle}" data-alt="${lcPageTitle}" data-title="${lcPageTitle}"></a>`);
+        }
       });
 
     },

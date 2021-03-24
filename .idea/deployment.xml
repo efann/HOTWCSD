@@ -50,6 +50,7 @@
             <excludedPath path="/var/www/hotwcsd.org/public_html/themes/bstrap_child/js/flexslider" />
             <excludedPath path="/var/www/hotwcsd.org/public_html/modules/fb_likebox" />
             <excludedPath path="/var/www/hotwcsd.org/public_html/modules/simple_sitemap" />
+            <excludedPath path="/var/www/hotwcsd.org/public_html/.gitignore" />
           </excludedPaths>
         </serverdata>
       </paths>

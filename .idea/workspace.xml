@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7c0bda25-d33d-47fe-9862-69391fb73165" name="Default Changelist" comment="" />
+    <list default="true" id="7c0bda25-d33d-47fe-9862-69391fb73165" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/bstrap_child/beo.routines/beo.routines.js" beforeDir="false" afterPath="$PROJECT_DIR$/themes/bstrap_child/beo.routines/beo.routines.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/bstrap_child/bstrap_child.libraries.yml" beforeDir="false" afterPath="$PROJECT_DIR$/themes/bstrap_child/bstrap_child.libraries.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/bstrap_child/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/themes/bstrap_child/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/bstrap_child/js/routines.js" beforeDir="false" afterPath="$PROJECT_DIR$/themes/bstrap_child/js/routines.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/bstrap_child/templates/system/html.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/themes/bstrap_child/templates/system/html.html.twig" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -35,7 +43,8 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.JavaScript" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.CSS" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -80,6 +89,8 @@
       <workItem from="1584902046944" duration="10000" />
       <workItem from="1606585411674" duration="168000" />
       <workItem from="1606590045366" duration="29000" />
+      <workItem from="1616595021839" duration="2343000" />
+      <workItem from="1616608304340" duration="1067000" />
     </task>
     <servers />
   </component>
@@ -97,21 +108,5 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="2507" y="240" key="#Deployment" timestamp="1584647223092">
-      <screen x="1920" y="0" width="1920" height="1080" />
-    </state>
-    <state x="2507" y="240" key="#Deployment/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1584647223092" />
-    <state x="135" y="139" width="1720" height="880" key="DirDiffDialog" timestamp="1584718731588">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state x="135" y="139" width="1720" height="880" key="DirDiffDialog/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1584718731588" />
-    <state x="2055" y="139" width="1720" height="880" key="DirDiffDialog/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1584647365246" />
-    <state x="830" y="446" key="publish.login" timestamp="1584719382856">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state x="830" y="446" key="publish.login/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1584719382856" />
-    <state x="2750" y="446" key="publish.login/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1584647247696" />
   </component>
 </project>
