@@ -1,4 +1,4 @@
-//   Updated on July 11, 2020
+//   Updated on March 30, 2021
 //----------------------------------------------------------------------------------------------------
 //----------------------------------------------------------------------------------------------------
 //----------------------------------------------------------------------------------------------------
@@ -360,6 +360,59 @@ var Beo =
           // larger images aren't effected.
           let loTitleSpan = jQuery(this).parent().find('span.ui-dialog-title');
           loTitleSpan.css('width', lcDefaultTitleCSS);
+        }
+      });
+
+    },
+
+    // -------------------------------------------------------------------------------------------------------------------
+    // Now using Lightbox to display images.
+    setupLightbox: function (tlCheckClass, tcMainContent, tcDefaultImageClass)
+    {
+      let llCheckClass = (typeof tlCheckClass !== 'undefined') ? tlCheckClass : true;
+      let lcMainContent = (typeof tcMainContent !== 'undefined') ? tcMainContent : "div.main-container";
+      let lcImageClass = (typeof tcDefaultImageClass !== 'undefined') ? tcDefaultImageClass : "responsive-image-large";
+
+      // Unfortunately, I can't get the title in the template of field.html.twig.
+      // to override the image output.
+      let lcPageTitle = jQuery(document).attr('title').split('|')[0].trim();
+
+      jQuery(lcMainContent + " img").each(function ()
+      {
+        let loImage = jQuery(this);
+        let lcAlt = loImage.attr('alt');
+        if (!lcAlt)
+        {
+          lcAlt = lcPageTitle;
+          loImage.attr('alt', lcAlt);
+        }
+
+        let lcTitle = loImage.attr('title');
+        if (!lcTitle)
+        {
+          lcTitle = lcPageTitle;
+          loImage.attr('title', lcTitle);
+        }
+
+        loImage.removeAttr('width');
+        loImage.removeAttr('height');
+        loImage.removeAttr('style');
+
+        if (llCheckClass)
+        {
+          let lcClasses = loImage.attr('class');
+
+          if ((typeof lcClasses === 'undefined') || (lcClasses.indexOf('responsive-image') < 0))
+          {
+            loImage.addClass(lcImageClass);
+          }
+        }
+
+        if (!loImage.parent().is('a'))
+        {
+          let lcSource = loImage.attr('src');
+          // From https://stackoverflow.com/questions/610406/javascript-equivalent-to-printf-string-format
+          loImage.wrap(`<a class="dialogbox-image" href="${lcSource}" data-lightbox="${lcTitle}" data-alt="${lcAlt}" data-title="${lcTitle}"></a>`);
         }
       });
 
