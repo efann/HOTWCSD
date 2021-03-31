@@ -5,7 +5,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/bstrap_child/beo.routines/beo.routines.js" beforeDir="false" afterPath="$PROJECT_DIR$/themes/bstrap_child/beo.routines/beo.routines.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/bstrap_child/js/routines.js" beforeDir="false" afterPath="$PROJECT_DIR$/themes/bstrap_child/js/routines.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/bstrap_child/templates/system/html.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/themes/bstrap_child/templates/system/html.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +23,8 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
@@ -90,6 +91,8 @@
       <workItem from="1616608304340" duration="1067000" />
       <workItem from="1617129008469" duration="282000" />
       <workItem from="1617129403463" duration="822000" />
+      <workItem from="1617207104180" duration="882000" />
+      <workItem from="1617220847516" duration="12000" />
     </task>
     <servers />
   </component>
