@@ -4,7 +4,6 @@
     <list default="true" id="7c0bda25-d33d-47fe-9862-69391fb73165" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/bstrap_child/beo.routines/beo.routines.js" beforeDir="false" afterPath="$PROJECT_DIR$/themes/bstrap_child/beo.routines/beo.routines.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/bstrap_child/js/routines.js" beforeDir="false" afterPath="$PROJECT_DIR$/themes/bstrap_child/js/routines.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,6 +92,8 @@
       <workItem from="1617129403463" duration="822000" />
       <workItem from="1617207104180" duration="882000" />
       <workItem from="1617220847516" duration="12000" />
+      <workItem from="1617313312874" duration="395000" />
+      <workItem from="1617322117018" duration="62000" />
     </task>
     <servers />
   </component>
