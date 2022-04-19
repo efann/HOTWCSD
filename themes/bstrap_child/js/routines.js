@@ -1,6 +1,6 @@
 var Routines =
   {
-    CONTACT_BLOCK: "#contact-message-feedback-form",
+    CONTACT_BLOCK: '#contact-message-feedback-form',
     FACEBOOK_BLOCK: '#block-fblikebox .fb-page',
     foFacebookTimer: null,
 
@@ -24,10 +24,10 @@ var Routines =
         return;
       }
 
-      Beo.setupWatermark(lcForm + " #edit-name", "Your Name");
-      Beo.setupWatermark(lcForm + " #edit-mail", "Your@E-mail.com");
-      Beo.setupWatermark(lcForm + " #edit-subject-0-value", "Subject of Question");
-      Beo.setupWatermark(lcForm + " #edit-message-0-value", "Question for HOTWCSD");
+      Beo.setupWatermark(lcForm + ' #edit-name', 'Your Name');
+      Beo.setupWatermark(lcForm + ' #edit-mail', 'Your@E-mail.com');
+      Beo.setupWatermark(lcForm + ' #edit-subject-0-value', 'Subject of Question');
+      Beo.setupWatermark(lcForm + ' #edit-message-0-value', 'Question for HOTWCSD');
 
     },
 
@@ -53,30 +53,15 @@ var Routines =
     setupGoogleCalendar: function ()
     {
       let lcCalendar = '#Google-Calendar';
+      let loCalender = jQuery(lcCalendar);
 
-      if (jQuery(lcCalendar).length == 0)
+      if (loCalender.length == 0)
       {
         return;
       }
 
-      Routines.resizeGoogleCalendar(lcCalendar);
-      jQuery(window).resize(function ()
-      {
-        Routines.resizeGoogleCalendar(lcCalendar);
-      });
-    },
-    //----------------------------------------------------------------------------------------------------
-    // From http://stackoverflow.com/questions/30083986/facebook-page-plugin-rerender-change-width-dynamically-responsive-rwd
-    resizeGoogleCalendar: function (tcCalendar)
-    {
-      let lcSection = "div.row section";
-      let lnWidth = jQuery(lcSection).width();
-      lnWidth -= parseInt(jQuery(lcSection).css('padding-left'));
-      lnWidth -= parseInt(jQuery(lcSection).css('padding-right'));
-
-      let lcHTML = '<iframe src="https://www.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=ucr8dfm35erc49t2nj23tq1j74%40group.calendar.google.com&amp;color=%2323164E&amp;ctz=America%2FChicago" style=" border-width:0 " width="' + lnWidth + '" height="600" frameborder="0" scrolling="no"></iframe>';
-
-      jQuery(tcCalendar).html(lcHTML);
+      let lcHTML = '<iframe title="Calendar for HOTWCSD" src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23B39DDB&ctz=America%2FChicago&showTitle=1&showNav=1&showTz=1&src=dWNyOGRmbTM1ZXJjNDl0Mm5qMjN0cTFqNzRAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%23AD1457&color=%230B8043" height="600" frameBorder="0" scrolling="no"></iframe>';
+      loCalender.html(lcHTML);
     },
 
     // -------------------------------------------------------------------------------------------------------------------
@@ -87,37 +72,37 @@ var Routines =
         return;
       }
 
-      let lcWrapperID = "TaxonomyContentAndListforTabs";
-      let lcListID = "TaxonomyListforTabs";
+      let lcWrapperID = 'TaxonomyContentAndListforTabs';
+      let lcListID = 'TaxonomyListforTabs';
 
       // First let's generate the HTML list for jQuery tabs from the view.
       // By the way, you can't use a view to generate the list: too much extra HTML fluff.
-      let lcList = "<ul id='" + lcListID + "'>\n";
+      let lcList = '<ul id=\'' + lcListID + '\'>\n';
 
       // http://stackoverflow.com/questions/8233604/use-jquery-to-get-descendants-of-an-element-that-are-not-children-of-a-container
       // This way, the sub-content rows will be excluded from the tabs.
-      jQuery(tcViewContentBlock + " div.views-row").not(".views-row .views-row").each(function ()
+      jQuery(tcViewContentBlock + ' div.views-row').not('.views-row .views-row').each(function ()
       {
-        let lcNode = "node_" + jQuery(this).find("div.views-field-nid span").html();
-        let lcTitle = jQuery(this).find("div.views-field-title span").html();
+        let lcNode = 'node_' + jQuery(this).find('div.views-field-nid span').html();
+        let lcTitle = jQuery(this).find('div.views-field-title span').html();
 
-        let lcHref = "<a href='#" + lcNode + "'>" + lcTitle + "</a>";
-        lcList += "<li>" + lcHref + "</li>\n";
+        let lcHref = '<a href=\'#' + lcNode + '\'>' + lcTitle + '</a>';
+        lcList += '<li>' + lcHref + '</li>\n';
 
       });
 
-      lcList += "</ul>\n";
+      lcList += '</ul>\n';
 
       // For jQuery Tabs to work, you must wrap the entire section with an enclosing div.
       // This enclosing div will be used as such: jQuery("#" + lcListID).tabs().
       // Then, insert the ul list above the view block.
-      jQuery(tcViewContentBlock).wrap("<div id='" + lcWrapperID + "'></div>");
+      jQuery(tcViewContentBlock).wrap('<div id=\'' + lcWrapperID + '\'></div>');
       jQuery(lcList).insertBefore(tcViewContentBlock);
 
-      let loTabs = jQuery("#" + lcWrapperID);
+      let loTabs = jQuery('#' + lcWrapperID);
       loTabs.tabs({
-        show: {effect: "slide", direction: "up"},
-        hide: {effect: "fadeOut", duration: 400}
+        show: {effect: 'slide', direction: 'up'},
+        hide: {effect: 'fadeOut', duration: 400}
       });
 
       Beo.adjustTabsAlignment(loTabs);
@@ -126,13 +111,13 @@ var Routines =
         Beo.adjustTabsAlignment(loTabs);
       });
 
-      jQuery(tcViewContentBlock + ", #" + lcWrapperID).fadeIn({duration: 250});
+      jQuery(tcViewContentBlock + ', #' + lcWrapperID).fadeIn({duration: 250});
     },
 
     // -------------------------------------------------------------------------------------------------------------------
     setupSlideShowImageSlider: function ()
     {
-      let loSlider = jQuery("#block-hwslideshowblock .flexslider");
+      let loSlider = jQuery('#block-hwslideshowblock .flexslider');
       if (loSlider.length == 0)
       {
         return;
@@ -142,9 +127,9 @@ var Routines =
         {
           directionNav: (jQuery(window).width() >= 768),
           controlNav: true,
-          prevText: "",
-          nextText: "",
-          animation: "fade",
+          prevText: '',
+          nextText: '',
+          animation: 'fade',
           slideshow: false
         });
 
@@ -157,7 +142,7 @@ var Routines =
     // Must be called before Beo.setupImageDialogBox.
     fixPDFDisplay: function ()
     {
-      jQuery(".row img").each(function ()
+      jQuery('.row img').each(function ()
       {
         let loImage = jQuery(this);
         let lcSrc = loImage.attr('src');
@@ -173,7 +158,7 @@ var Routines =
           let loParent = loImage.parent();
           if (loParent.is('a'))
           {
-            loParent.attr("target", "_blank");
+            loParent.attr('target', '_blank');
           }
         }
 
@@ -184,16 +169,16 @@ var Routines =
     //----------------------------------------------------------------------------------------------------
     setupVideos: function ()
     {
-      let loView = jQuery(".view-display-id-page_youtube_videos");
+      let loView = jQuery('.view-display-id-page_youtube_videos');
       if (loView.length == 0)
       {
         return;
       }
 
       let lcProtocol = ('https:' == document.location.protocol) ? 'https' : 'http';
-      loView.find(".views-field-field-youtube-video-id").each(function ()
+      loView.find('.views-field-field-youtube-video-id').each(function ()
       {
-        let lcVideoID = jQuery(this).find(".field-content").html();
+        let lcVideoID = jQuery(this).find('.field-content').html();
         let lcIFrame = '<div><iframe class="youtube-embedded" src="' + lcProtocol + '://www.youtube.com/embed/' + lcVideoID + '"></iframe></div>';
         jQuery(this).after(lcIFrame);
       });
@@ -255,8 +240,8 @@ var Routines =
 
       let lnHeight = (jQuery(window).width() >= 768) ? 1200 : 700;
 
-      loFB.attr("data-width", Math.floor(lnWidth));
-      loFB.attr("data-height", Math.floor(lnHeight));
+      loFB.attr('data-width', Math.floor(lnWidth));
+      loFB.attr('data-height', Math.floor(lnHeight));
 
       loFB.css('width', lnWidth + 'px');
 
@@ -278,20 +263,20 @@ var Routines =
     //----------------------------------------------------------------------------------------------------
     setupAnnouncements: function ()
     {
-      let loAnnoucementBlock = jQuery(".view-display-id-block_announcements_current");
+      let loAnnoucementBlock = jQuery('.view-display-id-block_announcements_current');
 
       if (loAnnoucementBlock.length == 0)
       {
         return;
       }
 
-      let loRows = loAnnoucementBlock.find(".views-row .views-field-title a");
+      let loRows = loAnnoucementBlock.find('.views-row .views-field-title a');
       if (loRows.length == 0)
       {
         return;
       }
 
-      let lcDialog = "#ShowAnnoucementForFrontPage";
+      let lcDialog = '#ShowAnnoucementForFrontPage';
       if (jQuery(lcDialog).length == 0)
       {
         jQuery('body').append('<div id="' + lcDialog.substring(1) + '"></div>');
@@ -305,10 +290,10 @@ var Routines =
 
         let loThis = jQuery(this);
 
-        let loParentRow = loThis.closest(".views-row");
+        let loParentRow = loThis.closest('.views-row');
 
         // All links from the announcement pop-up should redirect to a new tab.
-        let loBody = loParentRow.find(".views-field-body");
+        let loBody = loParentRow.find('.views-field-body');
         loBody.find('a').attr('target', '_blank');
 
         loDialog.html(loBody.html());
@@ -334,11 +319,11 @@ var Routines =
               // The maxWidth property doesn't really work.
               // From http://stackoverflow.com/questions/16471890/responsive-jquery-ui-dialog-and-a-fix-for-maxwidth-bug
               // And id="ShowTellQuote" gets enclosed in a ui-dialog wrapper. So. . . .
-              loParent.css("maxWidth", "800px");
+              loParent.css('maxWidth', '800px');
 
               // Problems with HTML entities in title: they are encoded. So < becomes &lt; and > becomes &gt;
               // http://stackoverflow.com/questions/14488774/using-html-in-a-dialogs-title-in-jquery-ui-1-10
-              loParent.find("span.ui-dialog-title").append("<span class='title'>" + lcTitle + "</span>");
+              loParent.find('span.ui-dialog-title').append('<span class=\'title\'>' + lcTitle + '</span>');
             }
           });
       });
@@ -348,11 +333,11 @@ var Routines =
     //----------------------------------------------------------------------------------------------------
     showAJAX: function (tlShow)
     {
-      let lcAJAX = "#ajax-loading";
+      let lcAJAX = '#ajax-loading';
       let loAJAX = jQuery(lcAJAX);
       if (loAJAX.length == 0)
       {
-        alert("The HTML element " + lcAJAX + " does not exist!");
+        alert('The HTML element ' + lcAJAX + ' does not exist!');
         return;
       }
 
