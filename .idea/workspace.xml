@@ -5,65 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7c0bda25-d33d-47fe-9862-69391fb73165" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/custom/custom.info.yml" beforeDir="false" afterPath="$PROJECT_DIR$/modules/custom/custom.info.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/adminimal_child/LICENSE.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/adminimal_child/adminimal_child.info.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/adminimal_child/adminimal_child.libraries.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/adminimal_child/adminimal_child.settings.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/adminimal_child/adminimal_child.theme" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/adminimal_child/css/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/adminimal_child/screenshot.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/adminimal_child/templates/form/container.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/bstrap_child/beo.routines/beo.routines.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/bstrap_child/beo.routines/beo.style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/bstrap_child/bstrap_child.info.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/bstrap_child/bstrap_child.libraries.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/bstrap_child/bstrap_child.theme" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/bstrap_child/config/install/bstrap_child.settings.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/bstrap_child/config/schema/bstrap_child.schema.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/bstrap_child/css/jquery-ui-1.12.1/AUTHORS.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/bstrap_child/css/jquery-ui-1.12.1/LICENSE.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/bstrap_child/css/jquery-ui-1.12.1/images/ui-bg_glass_40_ffc73d_1x400.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/bstrap_child/css/jquery-ui-1.12.1/images/ui-bg_highlight-hard_20_aa2e2c_1x100.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/bstrap_child/css/jquery-ui-1.12.1/images/ui-bg_highlight-soft_33_820604_1x100.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/bstrap_child/css/jquery-ui-1.12.1/images/ui-bg_highlight-soft_35_222222_1x100.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/bstrap_child/css/jquery-ui-1.12.1/images/ui-bg_highlight-soft_44_444444_1x100.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/bstrap_child/css/jquery-ui-1.12.1/images/ui-bg_highlight-soft_80_eeeeee_1x100.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/bstrap_child/css/jquery-ui-1.12.1/images/ui-bg_loop_25_000000_21x21.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/bstrap_child/css/jquery-ui-1.12.1/images/ui-icons_222222_256x240.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/bstrap_child/css/jquery-ui-1.12.1/images/ui-icons_4b8e0b_256x240.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/bstrap_child/css/jquery-ui-1.12.1/images/ui-icons_a83300_256x240.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/bstrap_child/css/jquery-ui-1.12.1/images/ui-icons_cccccc_256x240.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/bstrap_child/css/jquery-ui-1.12.1/images/ui-icons_ffffff_256x240.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/bstrap_child/css/jquery-ui-1.12.1/jquery-ui.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/bstrap_child/css/jquery-ui-1.12.1/jquery-ui.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/bstrap_child/css/jquery-ui-1.12.1/jquery-ui.structure.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/bstrap_child/css/jquery-ui-1.12.1/jquery-ui.structure.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/bstrap_child/css/jquery-ui-1.12.1/jquery-ui.theme.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/bstrap_child/css/jquery-ui-1.12.1/jquery-ui.theme.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/bstrap_child/css/jquery-ui-1.12.1/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/bstrap_child/css/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/bstrap_child/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/bstrap_child/images/required.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/bstrap_child/js/routines.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/bstrap_child/lightbox2-2.11.3/dist/css/lightbox.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/bstrap_child/lightbox2-2.11.3/dist/css/lightbox.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/bstrap_child/lightbox2-2.11.3/dist/images/close.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/bstrap_child/lightbox2-2.11.3/dist/images/loading.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/bstrap_child/lightbox2-2.11.3/dist/images/next.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/bstrap_child/lightbox2-2.11.3/dist/images/prev.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/bstrap_child/lightbox2-2.11.3/dist/js/lightbox.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/bstrap_child/lightbox2-2.11.3/dist/js/lightbox.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/bstrap_child/lightbox2-2.11.3/dist/js/lightbox.min.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/bstrap_child/logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/bstrap_child/screenshot.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/bstrap_child/src/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/bstrap_child/templates/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/bstrap_child/templates/menu/menu--custom-main-menu.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/bstrap_child/templates/system/html.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/bstrap_child/templates/system/page.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/custom/bstrap_child/bstrap_child.libraries.yml" beforeDir="false" afterPath="$PROJECT_DIR$/themes/custom/bstrap_child/bstrap_child.libraries.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/custom/bstrap_child/css/jquery-ui-1.12.1/AUTHORS.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/custom/bstrap_child/css/jquery-ui-1.12.1/LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/custom/bstrap_child/css/jquery-ui-1.12.1/images/ui-bg_glass_40_ffc73d_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/custom/bstrap_child/css/jquery-ui-1.12.1/images/ui-bg_highlight-hard_20_aa2e2c_1x100.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/custom/bstrap_child/css/jquery-ui-1.12.1/images/ui-bg_highlight-soft_33_820604_1x100.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/custom/bstrap_child/css/jquery-ui-1.12.1/images/ui-bg_highlight-soft_35_222222_1x100.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/custom/bstrap_child/css/jquery-ui-1.12.1/images/ui-bg_highlight-soft_44_444444_1x100.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/custom/bstrap_child/css/jquery-ui-1.12.1/images/ui-bg_highlight-soft_80_eeeeee_1x100.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/custom/bstrap_child/css/jquery-ui-1.12.1/images/ui-bg_loop_25_000000_21x21.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/custom/bstrap_child/css/jquery-ui-1.12.1/images/ui-icons_222222_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/custom/bstrap_child/css/jquery-ui-1.12.1/images/ui-icons_4b8e0b_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/custom/bstrap_child/css/jquery-ui-1.12.1/images/ui-icons_a83300_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/custom/bstrap_child/css/jquery-ui-1.12.1/images/ui-icons_cccccc_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/custom/bstrap_child/css/jquery-ui-1.12.1/images/ui-icons_ffffff_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/custom/bstrap_child/css/jquery-ui-1.12.1/jquery-ui.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/custom/bstrap_child/css/jquery-ui-1.12.1/jquery-ui.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/custom/bstrap_child/css/jquery-ui-1.12.1/jquery-ui.structure.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/custom/bstrap_child/css/jquery-ui-1.12.1/jquery-ui.structure.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/custom/bstrap_child/css/jquery-ui-1.12.1/jquery-ui.theme.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/custom/bstrap_child/css/jquery-ui-1.12.1/jquery-ui.theme.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/custom/bstrap_child/css/jquery-ui-1.12.1/package.json" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -156,6 +120,7 @@
       <workItem from="1617322117018" duration="62000" />
       <workItem from="1695327911522" duration="619000" />
       <workItem from="1695333076106" duration="1065000" />
+      <workItem from="1695837743438" duration="1134000" />
     </task>
     <servers />
   </component>

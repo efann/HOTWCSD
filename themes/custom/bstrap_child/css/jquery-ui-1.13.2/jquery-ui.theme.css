@@ -1,5 +1,5 @@
 /*!
- * jQuery UI CSS Framework 1.12.1
+ * jQuery UI CSS Framework 1.13.2
  * http://jqueryui.com
  *
  * Copyright jQuery Foundation and other contributors
@@ -8,7 +8,7 @@
  *
  * http://api.jqueryui.com/category/theming/
  *
- * To view and modify this theme, visit http://jqueryui.com/themeroller/?scope=&folderName=custom-theme&bgImgOpacityError=40&bgImgOpacityHighlight=80&bgImgOpacityActive=20&bgImgOpacityHover=33&bgImgOpacityDefault=35&bgImgOpacityContent=25&bgImgOpacityHeader=44&cornerRadiusShadow=8px&offsetLeftShadow=-7px&offsetTopShadow=-7px&thicknessShadow=7px&opacityShadow=60&bgImgOpacityShadow=30&bgTextureShadow=flat&bgColorShadow=%23cccccc&opacityOverlay=80&bgImgOpacityOverlay=50&bgTextureOverlay=flat&bgColorOverlay=%235c5c5c&iconColorError=%23a83300&fcError=%23111111&borderColorError=%23ffb73d&bgTextureError=glass&bgColorError=%23ffc73d&iconColorHighlight=%234b8e0b&fcHighlight=%23aa2e2c&borderColorHighlight=%23cccccc&bgTextureHighlight=highlight_soft&bgColorHighlight=%23eeeeee&iconColorActive=%23222222&fcActive=%23333333&borderColorActive=%23820604&bgTextureActive=highlight_hard&bgColorActive=%23aa2e2c&iconColorHover=%23ffffff&fcHover=%23ffffff&borderColorHover=%23aa2e2c&bgTextureHover=highlight_soft&bgColorHover=%23820604&iconColorDefault=%23cccccc&fcDefault=%23eeeeee&borderColorDefault=%23444444&bgTextureDefault=highlight_soft&bgColorDefault=%23222222&iconColorContent=%23cccccc&fcContent=%23ffffff&borderColorContent=%23555555&bgTextureContent=loop&bgColorContent=%23000000&iconColorHeader=%23ffffff&fcHeader=%23ffffff&borderColorHeader=%23333333&bgTextureHeader=highlight_soft&bgColorHeader=%23444444&cornerRadius=6px&fwDefault=normal&fsDefault=1.1em&ffDefault=Verdana%2CArial%2Csans-serif
+ * To view and modify this theme, visit http://jqueryui.com/themeroller/?scope=&folderName=custom-theme&bgImgOpacityHeader=44&bgImgOpacityContent=25&bgImgOpacityDefault=35&bgImgOpacityHover=33&bgImgOpacityActive=20&bgImgOpacityHighlight=80&bgImgOpacityError=40&cornerRadiusShadow=8px&offsetLeftShadow=-7px&offsetTopShadow=-7px&thicknessShadow=7px&opacityShadow=60&bgImgOpacityShadow=30&bgTextureShadow=flat&bgColorShadow=%23cccccc&opacityOverlay=80&bgImgOpacityOverlay=50&bgTextureOverlay=flat&bgColorOverlay=%235c5c5c&iconColorError=%23a83300&fcError=%23111111&borderColorError=%23ffb73d&bgTextureError=glass&bgColorError=%23ffc73d&iconColorHighlight=%234b8e0b&fcHighlight=%23aa2e2c&borderColorHighlight=%23cccccc&bgTextureHighlight=highlight_soft&bgColorHighlight=%23eeeeee&iconColorActive=%23222222&fcActive=%23333333&borderColorActive=%23820604&bgTextureActive=highlight_hard&bgColorActive=%23aa2e2c&iconColorHover=%23ffffff&fcHover=%23ffffff&borderColorHover=%23aa2e2c&bgTextureHover=highlight_soft&bgColorHover=%23820604&iconColorDefault=%23cccccc&fcDefault=%23eeeeee&borderColorDefault=%23444444&bgTextureDefault=highlight_soft&bgColorDefault=%23222222&iconColorContent=%23cccccc&fcContent=%23ffffff&borderColorContent=%23555555&bgTextureContent=loop&bgColorContent=%23000000&iconColorHeader=%23ffffff&fcHeader=%23ffffff&borderColorHeader=%23333333&bgTextureHeader=highlight_soft&bgColorHeader=%23444444&cornerRadius=6px&fwDefault=normal&fsDefault=1.1em&ffDefault=Verdana%2CArial%2Csans-serif
  */
 
 
@@ -172,18 +172,18 @@ a.ui-button:active,
 .ui-widget-content .ui-priority-secondary,
 .ui-widget-header .ui-priority-secondary {
 	opacity: .7;
-	filter:Alpha(Opacity=70); /* support: IE8 */
+	-ms-filter: "alpha(opacity=70)"; /* support: IE8 */
 	font-weight: normal;
 }
 .ui-state-disabled,
 .ui-widget-content .ui-state-disabled,
 .ui-widget-header .ui-state-disabled {
 	opacity: .35;
-	filter:Alpha(Opacity=35); /* support: IE8 */
+	-ms-filter: "alpha(opacity=35)"; /* support: IE8 */
 	background-image: none;
 }
 .ui-state-disabled .ui-icon {
-	filter:Alpha(Opacity=35); /* support: IE8 - See #6059 */
+	-ms-filter: "alpha(opacity=35)"; /* support: IE8 - See #6059 */
 }
 
 /* Icons
@@ -224,7 +224,10 @@ a.ui-button:active,
 }
 
 /* positioning */
-.ui-icon-blank { background-position: 16px 16px; }
+/* Three classes needed to override `.ui-button:hover .ui-icon` */
+.ui-icon-blank.ui-icon-blank.ui-icon-blank {
+	background-image: none;
+}
 .ui-icon-caret-1-n { background-position: 0 0; }
 .ui-icon-caret-1-ne { background-position: -16px 0; }
 .ui-icon-caret-1-e { background-position: -32px 0; }
@@ -435,7 +438,7 @@ a.ui-button:active,
 .ui-widget-overlay {
 	background: #5c5c5c;
 	opacity: .8;
-	filter: Alpha(Opacity=80); /* support: IE8 */
+	-ms-filter: Alpha(Opacity=80); /* support: IE8 */
 }
 .ui-widget-shadow {
 	-webkit-box-shadow: -7px -7px 7px #cccccc;
