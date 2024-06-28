@@ -28,11 +28,15 @@ beo.routines:
     name: Eclipse Public License
     url: https://opensource.org/licenses/EPL-1.0
     gpl-compatible: true
+  header: true
   js:
     beo.routines/beo.routines.js: {}
   css:
     component:
       beo.routines/beo.style.css: {}
+  dependencies:
+    - core/jquery
+    - bstrap_child/jquery.ui
 
 lightbox2:
   remote: https://lokeshdhakar.com/projects/lightbox2/
@@ -53,14 +57,11 @@ theme.files:
     js/routines.js: {}
 
 global-loading:
-  header: true
   css:
     theme:
        css/style.css: {}
 
   dependencies:
-    - core/jquery
-    - bstrap_child/jquery.ui
     - bstrap_child/beo.routines
     - bstrap_child/lightbox2
     - bstrap_child/flexslider
