@@ -1,5 +1,0 @@
-global-loading:
-  header: true
-  css:
-    theme:
-      css/style.css: {}
