@@ -3,11 +3,10 @@
   <component name="WebServers">
     <option name="servers">
       <webServer id="63b0636e-2800-4b65-b842-b51b9d9facb8" name="HOTWCSD" url="https://www.hotwcsd.org/">
-        <fileTransfer host="www.fannenterprises.com" port="22" accessType="SFTP">
+        <fileTransfer accessType="SFTP" host="www.fannenterprises.com" port="22" sshConfigId="25957327-2751-4cc9-8e15-42875036c1c4" sshConfig="HOTWCSD">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
           </advancedOptions>
-          <option name="port" value="22" />
         </fileTransfer>
       </webServer>
     </option>

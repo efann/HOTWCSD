@@ -4,15 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-   <list default="true" id="7c0bda25-d33d-47fe-9862-69391fb73165" name="Default Changelist" comment="Updating for Drupal 11">
-      <change beforePath="$PROJECT_DIR$/themes/custom/adminimal_child/LICENSE.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/adminimal_child/adminimal_child.info.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/adminimal_child/adminimal_child.libraries.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/adminimal_child/adminimal_child.settings.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/adminimal_child/adminimal_child.theme" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/adminimal_child/css/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/adminimal_child/screenshot.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/adminimal_child/templates/form/container.html.twig" beforeDir="false" />
+    <list default="true" id="7c0bda25-d33d-47fe-9862-69391fb73165" name="Default Changelist" comment="Updates to IDE config.">
+      <change beforePath="$PROJECT_DIR$/.idea/webServers.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webServers.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/custom/custom/custom.info.yml" beforeDir="false" afterPath="$PROJECT_DIR$/modules/custom/custom/custom.info.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,12 +26,12 @@
     &quot;assignee&quot;: &quot;efann&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/efann/HOTWCSD.git",
-    "accountId": "e9fb7dd8-f357-4425-9123-78c86ed783ef"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/efann/HOTWCSD.git&quot;,
+    &quot;accountId&quot;: &quot;e9fb7dd8-f357-4425-9123-78c86ed783ef&quot;
   }
-}]]></component>
+}</component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -52,31 +47,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.MCP Project settings loaded": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "WebServerToolWindowFactoryState": "true",
-    "WebServerToolWindowPanel.toolwindow.highlight.mappings": "true",
-    "WebServerToolWindowPanel.toolwindow.highlight.symlinks": "true",
-    "WebServerToolWindowPanel.toolwindow.show.date": "false",
-    "WebServerToolWindowPanel.toolwindow.show.permissions": "false",
-    "WebServerToolWindowPanel.toolwindow.show.size": "false",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "D:/PhpStorm/HOTWCSD",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowPanel.toolwindow.highlight.mappings&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowPanel.toolwindow.highlight.symlinks&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowPanel.toolwindow.show.date&quot;: &quot;false&quot;,
+    &quot;WebServerToolWindowPanel.toolwindow.show.permissions&quot;: &quot;false&quot;,
+    &quot;WebServerToolWindowPanel.toolwindow.show.size&quot;: &quot;false&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/PhpStorm/HOTWCSD&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\PhpStorm\HOTWCSD\modules\custom\src" />
@@ -86,8 +81,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-3bd3a6803838-JavaScript-PS-261.22158.283" />
-        <option value="bundled-php-predefined-a98d8de5180a-a9a4ea3ee0f4-com.jetbrains.php.sharedIndexes-PS-261.22158.283" />
+        <option value="bundled-js-predefined-d6986cc7102b-31caf2ab9e3c-JavaScript-PS-261.23567.149" />
+        <option value="bundled-php-predefined-a98d8de5180a-022fa7b8ab75-com.jetbrains.php.sharedIndexes-PS-261.23567.149" />
       </set>
     </attachedChunks>
   </component>
@@ -142,7 +137,11 @@
       <workItem from="1695914699194" duration="60000" />
       <workItem from="1695914809969" duration="16000" />
       <workItem from="1719603356703" duration="73000" />
-      <workItem from="1776956555244" duration="1023000" />
+      <workItem from="1776956555244" duration="1251000" />
+      <workItem from="1777066165825" duration="1000" />
+      <workItem from="1777077550452" duration="205000" />
+      <workItem from="1777132595532" duration="322000" />
+      <workItem from="1777140911429" duration="600000" />
     </task>
     <task id="LOCAL-00001" summary="Updating for Drupal 11">
       <option name="closed" value="true" />
@@ -152,7 +151,23 @@
       <option name="project" value="LOCAL" />
       <updated>1776956629773</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Removing the Adminimal Theme and its child themes.">
+      <option name="closed" value="true" />
+      <created>1776957920840</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1776957920840</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Updates to IDE config.">
+      <option name="closed" value="true" />
+      <created>1776958049757</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1776958049757</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -171,6 +186,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Updating for Drupal 11" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updating for Drupal 11" />
+    <MESSAGE value="Removing the Adminimal Theme and its child themes." />
+    <MESSAGE value="Updates to IDE config." />
+    <option name="LAST_COMMIT_MESSAGE" value="Updates to IDE config." />
   </component>
 </project>
