@@ -4,10 +4,31 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c0bda25-d33d-47fe-9862-69391fb73165" name="Default Changelist" comment="Updates to IDE config.">
-      <change beforePath="$PROJECT_DIR$/.idea/webServers.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webServers.xml" afterDir="false" />
+    <list default="true" id="7c0bda25-d33d-47fe-9862-69391fb73165" name="Default Changelist" comment="Update custom module core version requirement.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/custom/custom/custom.info.yml" beforeDir="false" afterPath="$PROJECT_DIR$/modules/custom/custom/custom.info.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/custom/bstrap_child/bstrap_child.libraries.yml" beforeDir="false" afterPath="$PROJECT_DIR$/themes/custom/bstrap_child/bstrap_child.libraries.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/custom/bstrap_child/css/jquery-ui-1.13.2/AUTHORS.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/custom/bstrap_child/css/jquery-ui-1.13.2/LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/custom/bstrap_child/css/jquery-ui-1.13.2/images/ui-bg_glass_40_ffc73d_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/custom/bstrap_child/css/jquery-ui-1.13.2/images/ui-bg_highlight-hard_20_aa2e2c_1x100.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/custom/bstrap_child/css/jquery-ui-1.13.2/images/ui-bg_highlight-soft_33_820604_1x100.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/custom/bstrap_child/css/jquery-ui-1.13.2/images/ui-bg_highlight-soft_35_222222_1x100.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/custom/bstrap_child/css/jquery-ui-1.13.2/images/ui-bg_highlight-soft_44_444444_1x100.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/custom/bstrap_child/css/jquery-ui-1.13.2/images/ui-bg_highlight-soft_80_eeeeee_1x100.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/custom/bstrap_child/css/jquery-ui-1.13.2/images/ui-bg_loop_25_000000_21x21.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/custom/bstrap_child/css/jquery-ui-1.13.2/images/ui-icons_222222_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/custom/bstrap_child/css/jquery-ui-1.13.2/images/ui-icons_4b8e0b_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/custom/bstrap_child/css/jquery-ui-1.13.2/images/ui-icons_a83300_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/custom/bstrap_child/css/jquery-ui-1.13.2/images/ui-icons_cccccc_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/custom/bstrap_child/css/jquery-ui-1.13.2/images/ui-icons_ffffff_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/custom/bstrap_child/css/jquery-ui-1.13.2/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/custom/bstrap_child/css/jquery-ui-1.13.2/jquery-ui.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/custom/bstrap_child/css/jquery-ui-1.13.2/jquery-ui.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/custom/bstrap_child/css/jquery-ui-1.13.2/jquery-ui.structure.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/custom/bstrap_child/css/jquery-ui-1.13.2/jquery-ui.structure.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/custom/bstrap_child/css/jquery-ui-1.13.2/jquery-ui.theme.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/custom/bstrap_child/css/jquery-ui-1.13.2/jquery-ui.theme.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/custom/bstrap_child/css/jquery-ui-1.13.2/package.json" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,7 +50,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/efann/HOTWCSD.git&quot;,
-    &quot;accountId&quot;: &quot;e9fb7dd8-f357-4425-9123-78c86ed783ef&quot;
+    &quot;accountId&quot;: &quot;f8a2dddb-50d3-417f-a2a6-21e1274cec3b&quot;
   }
 }</component>
   <component name="MarkdownSettingsMigration">
@@ -52,6 +73,7 @@
     &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;true&quot;,
@@ -141,7 +163,10 @@
       <workItem from="1777066165825" duration="1000" />
       <workItem from="1777077550452" duration="205000" />
       <workItem from="1777132595532" duration="322000" />
-      <workItem from="1777140911429" duration="600000" />
+      <workItem from="1777140911429" duration="1335000" />
+      <workItem from="1777149043903" duration="6000" />
+      <workItem from="1777322324945" duration="2040000" />
+      <workItem from="1777344523354" duration="2306000" />
     </task>
     <task id="LOCAL-00001" summary="Updating for Drupal 11">
       <option name="closed" value="true" />
@@ -167,7 +192,15 @@
       <option name="project" value="LOCAL" />
       <updated>1776958049757</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Update custom module core version requirement.">
+      <option name="closed" value="true" />
+      <created>1777141607826</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1777141607826</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -188,6 +221,7 @@
     <MESSAGE value="Updating for Drupal 11" />
     <MESSAGE value="Removing the Adminimal Theme and its child themes." />
     <MESSAGE value="Updates to IDE config." />
-    <option name="LAST_COMMIT_MESSAGE" value="Updates to IDE config." />
+    <MESSAGE value="Update custom module core version requirement." />
+    <option name="LAST_COMMIT_MESSAGE" value="Update custom module core version requirement." />
   </component>
 </project>
