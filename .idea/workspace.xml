@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c0bda25-d33d-47fe-9862-69391fb73165" name="Default Changelist" comment="IDE settings update">
+    <list default="true" id="7c0bda25-d33d-47fe-9862-69391fb73165" name="Default Changelist" comment="Fixing document.write issues.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/custom/bstrap_child/beo.routines/beo.routines.js" beforeDir="false" afterPath="$PROJECT_DIR$/themes/custom/bstrap_child/beo.routines/beo.routines.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,7 +146,10 @@
       <workItem from="1777322324945" duration="2040000" />
       <workItem from="1777344523354" duration="3460000" />
       <workItem from="1777404156390" duration="8000" />
-      <workItem from="1777420726244" duration="25000" />
+      <workItem from="1777420726244" duration="789000" />
+      <workItem from="1777426292996" duration="45000" />
+      <workItem from="1777426503243" duration="15000" />
+      <workItem from="1777469222530" duration="2291000" />
     </task>
     <task id="LOCAL-00001" summary="Updating for Drupal 11">
       <option name="closed" value="true" />
@@ -203,7 +207,15 @@
       <option name="project" value="LOCAL" />
       <updated>1777404097133</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Fixing document.write issues.">
+      <option name="closed" value="true" />
+      <created>1777420900877</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1777420900877</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -228,6 +240,7 @@
     <MESSAGE value="Updating to JQuery UI 1.14.2 to work better with Drupal 11 JQuery 4.0." />
     <MESSAGE value="Removed old JQuery 1.13.2 library" />
     <MESSAGE value="IDE settings update" />
-    <option name="LAST_COMMIT_MESSAGE" value="IDE settings update" />
+    <MESSAGE value="Fixing document.write issues." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixing document.write issues." />
   </component>
 </project>
