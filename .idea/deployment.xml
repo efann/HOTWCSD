@@ -55,6 +55,7 @@
             <excludedPath path="/var/www/hotwcsd.org/public_html/modules/contrib" />
             <excludedPath path="/var/www/hotwcsd.org/public_html/README.md" />
             <excludedPath path="/var/www/hotwcsd.org/public_html/themes/custom/bstrap_child/js/flexslider" />
+            <excludedPath path="/var/www/hotwcsd.org/public_html/recipes" />
           </excludedPaths>
         </serverdata>
       </paths>
